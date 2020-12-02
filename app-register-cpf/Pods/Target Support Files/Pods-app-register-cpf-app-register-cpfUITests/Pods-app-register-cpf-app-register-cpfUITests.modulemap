@@ -1,0 +1,6 @@
+framework module Pods_app_register_cpf_app_register_cpfUITests {
+  umbrella header "Pods-app-register-cpf-app-register-cpfUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
