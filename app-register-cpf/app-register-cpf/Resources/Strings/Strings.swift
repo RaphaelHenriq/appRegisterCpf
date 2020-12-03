@@ -13,4 +13,5 @@ enum Strings {
     static let servicesButton = "Serviços Digio"
     static let titleRegisterNavigationBar = "Registre o CPF"
     static let titleListiningNavigationBar = "Listagem CPF"
+    static let avoidRegisterCpf = ""
 }

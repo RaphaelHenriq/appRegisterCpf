@@ -8,11 +8,21 @@
 import UIKit
 
 class ListingCpfViewController: UIViewController {
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var listingTableView: UITableView!
 
+    // MARK: - Init Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
     }
+    
+    // MARK: - Class methods
+    
+    
 
 
 }

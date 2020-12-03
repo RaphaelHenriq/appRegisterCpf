@@ -10,7 +10,6 @@
 		4925DC365C1331C42C54F917 /* Pods_app_register_cpf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF36B75555617A29B80AA99 /* Pods_app_register_cpf.framework */; };
 		91F7BE1D2577383900965278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE1C2577383900965278 /* AppDelegate.swift */; };
 		91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE1E2577383900965278 /* SceneDelegate.swift */; };
-		91F7BE242577383900965278 /* app_register_cpf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE222577383900965278 /* app_register_cpf.xcdatamodeld */; };
 		91F7BE262577383A00965278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE252577383A00965278 /* Assets.xcassets */; };
 		91F7BE292577383B00965278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE282577383B00965278 /* Preview Assets.xcassets */; };
 		91F7BE2C2577383B00965278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE2A2577383B00965278 /* LaunchScreen.storyboard */; };
@@ -38,6 +37,7 @@
 		91F7BFC22578587E00965278 /* ListingCpfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BFC02578587E00965278 /* ListingCpfViewController.xib */; };
 		91F7BFE425786A7900965278 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BFE325786A7900965278 /* Strings.swift */; };
 		91F7BFEC2578721500965278 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BFEB2578721500965278 /* Extensions.swift */; };
+		91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91F7C0192578895900965278 /* app_register_cpf.xcdatamodeld */; };
 		DAF811A56EC331C2EB7F8B2A /* Pods_app_register_cpfTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC4211CD57C69D2F2A22CAE /* Pods_app_register_cpfTests.framework */; };
 		E686F36CD3E95830FEAC0A74 /* Pods_app_register_cpf_app_register_cpfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E9332118892168AA0BACBB2 /* Pods_app_register_cpf_app_register_cpfUITests.framework */; };
 /* End PBXBuildFile section */
@@ -67,7 +67,6 @@
 		91F7BE192577383900965278 /* app-register-cpf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-register-cpf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7BE1C2577383900965278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F7BE1E2577383900965278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		91F7BE232577383900965278 /* app_register_cpf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = app_register_cpf.xcdatamodel; sourceTree = "<group>"; };
 		91F7BE252577383A00965278 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91F7BE282577383B00965278 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		91F7BE2B2577383B00965278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		91F7BFC02578587E00965278 /* ListingCpfViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingCpfViewController.xib; sourceTree = "<group>"; };
 		91F7BFE325786A7900965278 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		91F7BFEB2578721500965278 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91F7C01A2578895900965278 /* app_register_cpf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = app_register_cpf.xcdatamodel; sourceTree = "<group>"; };
 		9820B962376AB6CD779D6BBC /* Pods-app-register-cpf-app-register-cpfUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-register-cpf-app-register-cpfUITests.release.xcconfig"; path = "Target Support Files/Pods-app-register-cpf-app-register-cpfUITests/Pods-app-register-cpf-app-register-cpfUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9E9332118892168AA0BACBB2 /* Pods_app_register_cpf_app_register_cpfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_register_cpf_app_register_cpfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C76037B9DF8848EFAC4D673E /* Pods-app-register-cpfTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-register-cpfTests.release.xcconfig"; path = "Target Support Files/Pods-app-register-cpfTests/Pods-app-register-cpfTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		91F7BE6525773A5D00965278 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				91F7BE222577383900965278 /* app_register_cpf.xcdatamodeld */,
+				91F7C0192578895900965278 /* app_register_cpf.xcdatamodeld */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -625,8 +625,8 @@
 				91F7BFC12578587E00965278 /* ListingCpfViewController.swift in Sources */,
 				91F7BEB02577408E00965278 /* RegisterCpfViewController.swift in Sources */,
 				91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */,
+				91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */,
 				91F7BEB9257740A400965278 /* RegisterCpfViewModel.swift in Sources */,
-				91F7BE242577383900965278 /* app_register_cpf.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -957,12 +957,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		91F7BE222577383900965278 /* app_register_cpf.xcdatamodeld */ = {
+		91F7C0192578895900965278 /* app_register_cpf.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				91F7BE232577383900965278 /* app_register_cpf.xcdatamodel */,
+				91F7C01A2578895900965278 /* app_register_cpf.xcdatamodel */,
 			);
-			currentVersion = 91F7BE232577383900965278 /* app_register_cpf.xcdatamodel */;
+			currentVersion = 91F7C01A2578895900965278 /* app_register_cpf.xcdatamodel */;
 			path = app_register_cpf.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

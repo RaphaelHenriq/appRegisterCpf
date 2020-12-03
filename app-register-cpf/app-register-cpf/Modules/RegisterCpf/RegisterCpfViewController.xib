@@ -20,7 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCpfViewController" customModule="app_register_cpf" customModuleProvider="target">
             <connections>
                 <outlet property="numberLabel" destination="Hfl-qy-LVd" id="gP2-SH-xth"/>
-                <outlet property="numberTextField" destination="bGW-2i-7af" id="SPD-Vc-1fV"/>
+                <outlet property="numberTextField" destination="wJM-47-AdX" id="hfM-hJ-2ef"/>
                 <outlet property="saveNumberButton" destination="Bo9-aY-nT4" id="s7x-2K-taf"/>
                 <outlet property="servicesButton" destination="82A-QX-S5W" id="Sbd-Ai-YMA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -31,26 +31,29 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJM-47-AdX">
+                    <rect key="frame" x="24" y="130" width="366" height="34"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-qy-LVd">
                     <rect key="frame" x="24" y="92" width="54" height="26"/>
                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-2i-7af">
-                    <rect key="frame" x="24" y="130" width="366" height="34"/>
-                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-aY-nT4">
-                    <rect key="frame" x="24" y="188" width="366" height="40"/>
+                    <rect key="frame" x="24" y="176" width="366" height="40"/>
                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                     </state>
+                    <connections>
+                        <action selector="saveTapButton:" destination="-1" eventType="touchUpInside" id="ihN-V2-3RB"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82A-QX-S5W">
-                    <rect key="frame" x="24" y="348" width="366" height="80"/>
+                    <rect key="frame" x="24" y="336" width="366" height="80"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="Usv-dE-rtY"/>
@@ -67,16 +70,16 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGW-2i-7af" secondAttribute="trailing" constant="24" id="EDp-2N-fmq"/>
+                <constraint firstItem="wJM-47-AdX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="5ay-qH-V8z"/>
+                <constraint firstItem="Bo9-aY-nT4" firstAttribute="top" secondItem="wJM-47-AdX" secondAttribute="bottom" constant="12" id="9Zg-h1-D7g"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wJM-47-AdX" secondAttribute="trailing" constant="24" id="DHr-rM-xUt"/>
                 <constraint firstItem="Bo9-aY-nT4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="JYS-q8-bVw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="82A-QX-S5W" secondAttribute="bottom" priority="250" constant="496" id="LV0-HU-7p8"/>
-                <constraint firstItem="bGW-2i-7af" firstAttribute="top" secondItem="Hfl-qy-LVd" secondAttribute="bottom" constant="12" id="ZNe-wT-fhJ"/>
                 <constraint firstItem="82A-QX-S5W" firstAttribute="top" secondItem="Bo9-aY-nT4" secondAttribute="bottom" constant="120" id="aQ2-DV-cXj"/>
                 <constraint firstItem="Hfl-qy-LVd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="bfJ-m4-asb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bo9-aY-nT4" secondAttribute="trailing" constant="24" id="c2e-Qg-ACr"/>
+                <constraint firstItem="wJM-47-AdX" firstAttribute="top" secondItem="Hfl-qy-LVd" secondAttribute="bottom" constant="12" id="dsS-Zh-2av"/>
                 <constraint firstItem="Hfl-qy-LVd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="fX9-cm-0HX"/>
-                <constraint firstItem="Bo9-aY-nT4" firstAttribute="top" secondItem="bGW-2i-7af" secondAttribute="bottom" constant="24" id="g7q-X1-gpD"/>
-                <constraint firstItem="bGW-2i-7af" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="nRp-dT-d9j"/>
                 <constraint firstItem="82A-QX-S5W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="nx2-zi-og9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="82A-QX-S5W" secondAttribute="trailing" constant="24" id="wFk-HA-DX6"/>
             </constraints>

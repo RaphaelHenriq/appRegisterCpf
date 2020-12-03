@@ -15,19 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        let tabBarVc = UITabBarController()
-//        
-//        let registerCpfViewController = RegisterCpfViewController()
-//        let listingCpfViewController = ListingCpfViewController()
-//        
-//        tabBarVc.setViewControllers([registerCpfViewController, listingCpfViewController], animated: false)
-//        
-////        let tabBarViewController = TabBarController()
-//        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.makeKeyAndVisible()
-//        window?.rootViewController = tabBarVc
-        
         return true
     }
 
