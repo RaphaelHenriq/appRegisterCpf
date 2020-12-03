@@ -14,4 +14,7 @@ enum Strings {
     static let titleRegisterNavigationBar = "Registre o CPF"
     static let titleListiningNavigationBar = "Listagem CPF"
     static let avoidRegisterCpf = ""
+    static let okAlertButton = "Ok"
+    static let titleRegisterAlertButton = "Falha ao registrar CPF"
+    static let messageRegisterAlertButton = "Favor inserir números"
 }

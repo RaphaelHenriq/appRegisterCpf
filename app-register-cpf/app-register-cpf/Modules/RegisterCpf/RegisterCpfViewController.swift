@@ -34,9 +34,10 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureContent()
-        self.rulesTextView()
         self.layoutViewController()
         self.viewModel.coreData()
+    
+        self.numberTextField.delegate = self
     }
     
     // MARK: - Class methods
@@ -45,10 +46,6 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
         self.numberLabel.text = Strings.numberLabel
         self.servicesButton.setTitle(Strings.servicesButton, for: .normal)
         self.saveNumberButton.setTitle(Strings.saveNumberButton, for: .normal)
-    }
-    
-    private func rulesTextView() {
-        self.numberTextField.keyboardType = .numberPad
     }
     
     private func layoutViewController() {
@@ -61,14 +58,17 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     }
     
     // MARK: - Public methods
-    
+
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let allowedCharacters = "1234567890"
-        let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
-        let typedCharacterSet = CharacterSet(charactersIn: string)
-        return allowedCharacterSet.isSuperset(of: typedCharacterSet)
+        guard let textFieldText = textField.text,
+            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+                return false
+        }
+        let substringToReplace = textFieldText[rangeOfTextToReplace]
+        let count = textFieldText.count - substringToReplace.count + string.count
+        return count <= 11
     }
-    
+
     // MARK: - Actions
     
     @IBAction func servicesTapButton(_ sender: Any) {
@@ -76,8 +76,15 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveTapButton(_ sender: Any) {
-        self.viewModel.saveCpf(textField: numberTextField)
-        self.numberTextField.text = Strings.avoidRegisterCpf
+        
+        if (String(self.numberTextField.text ?? "").isInt) {
+            self.viewModel.saveCpf(textField: numberTextField)
+            self.numberTextField.text = Strings.avoidRegisterCpf
+        } else {
+            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageRegisterAlertButton, handler: nil)
+            self.numberTextField.text = Strings.avoidRegisterCpf
+        }
+
     }
     
 }
