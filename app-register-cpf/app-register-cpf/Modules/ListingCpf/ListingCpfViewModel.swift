@@ -6,3 +6,31 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
+
+class ListingCpfViewModel {
+    
+    // MARK: - Class properties
+    
+    private var context: NSManagedObjectContext!
+    var cpf: [NSManagedObject] = []
+    
+    // MARK: - Class methods
+    
+    func coreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.context = appDelegate.persistentContainer.viewContext
+        
+    }
+
+    func getCpf() {
+        let requisition = NSFetchRequest<NSFetchRequestResult>(entityName: "Cpf")
+        do {
+            let requisitionGet = try context.fetch(requisition)
+        } catch let erro as Error {
+            print(erro.localizedDescription)
+        }
+    }
+    
+}

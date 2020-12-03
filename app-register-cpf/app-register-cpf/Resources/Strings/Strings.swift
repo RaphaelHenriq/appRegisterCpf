@@ -16,5 +16,5 @@ enum Strings {
     static let avoidRegisterCpf = ""
     static let okAlertButton = "Ok"
     static let titleRegisterAlertButton = "Falha ao registrar CPF"
-    static let messageRegisterAlertButton = "Favor inserir números"
+    static let messageRegisterAlertButton = "Favor inserir apenas números"
 }

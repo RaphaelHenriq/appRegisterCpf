@@ -76,7 +76,6 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveTapButton(_ sender: Any) {
-        
         if (String(self.numberTextField.text ?? "").isInt) {
             self.viewModel.saveCpf(textField: numberTextField)
             self.numberTextField.text = Strings.avoidRegisterCpf
