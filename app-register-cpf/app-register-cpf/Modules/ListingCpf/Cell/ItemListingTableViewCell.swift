@@ -34,9 +34,9 @@ class ItemListingTableViewCell: UITableViewCell {
     
     // MARK: - Public methods
     
-    func passData(_ data: (cpf: String, date: String)) {
-        self.cpfLabel.text = data.cpf
-        self.dateLabel.text = data.date
+    func passData(cpf: String, date: String) {
+        self.cpfLabel.text = cpf
+        self.dateLabel.text = date
     }
     
 }

@@ -6,50 +6,46 @@
 //
 
 import UIKit
-import CoreData
 
 class ListingCpfViewController: UIViewController {
     
     // MARK: - Outlets
     
     @IBOutlet weak var listingTableView: UITableView!
-
+    
+    // MARK: - Class properties
+    
+    private let viewModel: ListingCpfViewModel
+    
     // MARK: - Init Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureTableView()
+        self.viewModel.coreData()
+        
     }
     
-    // MARK: - Class methods
+    override func viewDidAppear(_ animated: Bool) {
+        self.viewModel.getCpf(reloadTableView: self.listingTableView)
+    }
     
-    private var tableView: UITableView!
-    private var context: NSManagedObjectContext!
-    var cpf: [NSManagedObject] = []
+    init() {
+        self.viewModel = ListingCpfViewModel()
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Class methods
     
     private func configureTableView() {
-        self.tableView = UITableView(frame: self.view.frame)
         view.backgroundColor = .white
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.registerCell(ItemListingTableViewCell.className)
-    }
-    
-    func coreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.context = appDelegate.persistentContainer.viewContext
-        
-    }
-
-    func getCpf() {
-        let requisition = NSFetchRequest<NSFetchRequestResult>(entityName: "Cpf")
-        do {
-            let getRequisition = try context.fetch(requisition)
-        } catch let erro as Error {
-            print(erro.localizedDescription)
-        }
+        self.listingTableView.delegate = self
+        self.listingTableView.dataSource = self
+        self.listingTableView.registerCell(ItemListingTableViewCell.className)
     }
 
 }
@@ -59,12 +55,16 @@ class ListingCpfViewController: UIViewController {
 
 extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.cpf.count
+        return self.viewModel.Cpf.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(ofType: ItemListingTableViewCell.self, for: indexPath)
-//        cell.passData(data)
+        let cell = self.listingTableView.dequeueReusableCell(ofType: ItemListingTableViewCell.self, for: indexPath)
+        let cpf = self.viewModel.Cpf[indexPath.row]
+        let cpfData = String(describing: cpf.value(forKey: StringsCoreData.dateAttribute))
+        let cpfText = cpf.value(forKey: StringsCoreData.textAttribute) as? String ?? Strings.avoid
+        
+        cell.passData(cpf: cpfText, date: cpfData)
         return cell
     }
     

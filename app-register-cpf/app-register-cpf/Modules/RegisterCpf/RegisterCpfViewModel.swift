@@ -15,19 +15,21 @@ class RegisterCpfViewModel {
     
     private var context: NSManagedObjectContext!
     
+    // MARK: - Public properties
+    
+    enum textFieldCpf{
+        case lessCharacters
+        case onlyNumbers
+        case saveCpf
+    }
+    
     // MARK: - Class methods
     
-    func coreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.context = appDelegate.persistentContainer.viewContext
+    private func saveCpf(textField: UITextField) {
+        let newCpf = NSEntityDescription.insertNewObject(forEntityName: StringsCoreData.cpfEntity, into: self.context)
         
-    }
-
-    func saveCpf(textField: UITextField) {
-        let newCpf = NSEntityDescription.insertNewObject(forEntityName: "Cpf", into: self.context)
-        
-        newCpf.setValue(textField.text, forKey: "text")
-        newCpf.setValue(Date(), forKey: "date")
+        newCpf.setValue(textField.text, forKey: StringsCoreData.textAttribute)
+        newCpf.setValue(NSDate(), forKey: StringsCoreData.dateAttribute)
         
         do {
             try self.context.save()
@@ -36,6 +38,30 @@ class RegisterCpfViewModel {
         } catch let erro as Error {
             print(erro.localizedDescription)
         }
+    }
+    
+    // MARK: - Public methods
+    
+    func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: UITextField) -> textFieldCpf {
+        
+        if (String(textField.text ?? Strings.avoid).isInt) {
+            if limitAcceptedTextView {
+                self.saveCpf(textField: textField)
+                return .saveCpf
+                
+            } else {
+                return .lessCharacters
+            }
+            
+        } else {
+            return .onlyNumbers
+        }
+        
+    }
+    
+    func coreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.context = appDelegate.persistentContainer.viewContext
     }
     
 }

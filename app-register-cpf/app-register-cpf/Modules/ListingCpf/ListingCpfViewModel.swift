@@ -14,20 +14,24 @@ class ListingCpfViewModel {
     // MARK: - Class properties
     
     private var context: NSManagedObjectContext!
-    var cpf: [NSManagedObject] = []
+    
+    // MARK: - Public properties
+    
+    var Cpf: [NSManagedObject] = []
     
     // MARK: - Class methods
     
     func coreData() {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         self.context = appDelegate.persistentContainer.viewContext
-        
     }
 
-    func getCpf() {
+    func getCpf(reloadTableView: UITableView) {
         let requisition = NSFetchRequest<NSFetchRequestResult>(entityName: "Cpf")
         do {
             let requisitionGet = try context.fetch(requisition)
+            self.Cpf = requisitionGet as! [NSManagedObject]
+            reloadTableView.reloadData()
         } catch let erro as Error {
             print(erro.localizedDescription)
         }

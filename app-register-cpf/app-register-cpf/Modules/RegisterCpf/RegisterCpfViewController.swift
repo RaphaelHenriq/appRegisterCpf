@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
+class RegisterCpfViewController: UIViewController {
     
     // MARK: - Outlets
     
@@ -19,6 +19,7 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Class properties
     
     private let viewModel: RegisterCpfViewModel
+    private var limitNumber: Bool = false
     
     // MARK: - Init cycle
     
@@ -36,7 +37,6 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
         self.configureContent()
         self.layoutViewController()
         self.viewModel.coreData()
-    
         self.numberTextField.delegate = self
     }
     
@@ -57,16 +57,20 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
         self.numberTextField.delegate = self
     }
     
-    // MARK: - Public methods
-
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        guard let textFieldText = textField.text,
-            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
-                return false
+    private func statusTextFieldWhenTapSave() {
+        let limitNumberTextField = textFieldShouldReturn(textField: self.numberTextField)
+        let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: self.numberTextField)
+        switch enumTextField {
+        case .saveCpf:
+            self.numberTextField.text = Strings.avoid
+            
+        case .lessCharacters:
+            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageLessNumbersRegisterAlertButton, handler: nil)
+            
+        case .onlyNumbers:
+            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageRegisterAlertButton, handler: nil)
+            self.numberTextField.text = Strings.avoid
         }
-        let substringToReplace = textFieldText[rangeOfTextToReplace]
-        let count = textFieldText.count - substringToReplace.count + string.count
-        return count <= 11
     }
 
     // MARK: - Actions
@@ -76,14 +80,31 @@ class RegisterCpfViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func saveTapButton(_ sender: Any) {
-        if (String(self.numberTextField.text ?? "").isInt) {
-            self.viewModel.saveCpf(textField: numberTextField)
-            self.numberTextField.text = Strings.avoidRegisterCpf
-        } else {
-            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageRegisterAlertButton, handler: nil)
-            self.numberTextField.text = Strings.avoidRegisterCpf
-        }
-
+        self.statusTextFieldWhenTapSave()
     }
     
+}
+
+// MARK: - Extensions
+
+extension RegisterCpfViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let textFieldText = textField.text,
+            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+                return false
+        }
+        let substringToReplace = textFieldText[rangeOfTextToReplace]
+        let count = textFieldText.count - substringToReplace.count + string.count
+        return count <= 11
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField.text!.count < 11 {
+            self.limitNumber = false
+        } else if textField.text!.count == 11 {
+            self.limitNumber = true
+        }
+        self.view.endEditing(true)
+        return self.limitNumber
+    }
 }
