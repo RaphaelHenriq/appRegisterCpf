@@ -298,9 +298,9 @@
 		91F7BE6725773A8D00965278 /* ListingCpf */ = {
 			isa = PBXGroup;
 			children = (
-				91F7BFA9257854A200965278 /* ListingCpfViewModel.swift */,
 				91F7BFBF2578587E00965278 /* ListingCpfViewController.swift */,
 				91F7BFC02578587E00965278 /* ListingCpfViewController.xib */,
+				91F7BFA9257854A200965278 /* ListingCpfViewModel.swift */,
 			);
 			path = ListingCpf;
 			sourceTree = "<group>";

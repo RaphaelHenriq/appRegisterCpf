@@ -25,30 +25,11 @@ class RegisterCpfViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureTabBar()
         
         view.backgroundColor = .blue
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func buttonTap(_ sender: Any) {
-        let tabBarVc = UITabBarController()
-        
-        let vc1 = FirstViewController()
-        let vc2 = ListingCpfViewController()
-        
-        tabBarVc.setViewControllers([vc1, vc2], animated: false)
-        
-        tabBarVc.modalPresentationStyle = .fullScreen
-        present(tabBarVc, animated: true)
-    }
     
 
-}
-
-class FirstViewController: UIViewController {
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.view.backgroundColor = .green
-    }
 }
