@@ -42,14 +42,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createRegisterNavigationController() -> UINavigationController {
         let registerVC = RegisterCpfViewController()
-        registerVC.title = "Registre o CPF"
+        registerVC.title = Strings.titleRegisterNavigationBar
         registerVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)
         return UINavigationController(rootViewController: registerVC)
     }
     
     func createListiningNavigationController() -> UINavigationController {
         let listiningVC = ListingCpfViewController()
-        listiningVC.title = "Registre o CPF"
+        listiningVC.title = Strings.titleListiningNavigationBar
         listiningVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         return UINavigationController(rootViewController: listiningVC)
     }

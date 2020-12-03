@@ -3,10 +3,19 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-Bold.ttf">
+            <string>ProximaNova-Bold</string>
+        </array>
+        <array key="ProximaNova-Regular.ttf">
+            <string>ProximaNova-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterCpfViewController" customModule="app_register_cpf" customModuleProvider="target">
             <connections>
@@ -23,25 +32,35 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-qy-LVd">
-                    <rect key="frame" x="24" y="92" width="42" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="24" y="92" width="54" height="26"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bGW-2i-7af">
-                    <rect key="frame" x="24" y="128" width="366" height="34"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <rect key="frame" x="24" y="130" width="366" height="34"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="18"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-aY-nT4">
-                    <rect key="frame" x="24" y="186" width="366" height="30"/>
-                    <state key="normal" title="Button"/>
+                    <rect key="frame" x="24" y="188" width="366" height="40"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
+                    <state key="normal" title="Button">
+                        <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                    </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82A-QX-S5W">
-                    <rect key="frame" x="24" y="336" width="366" height="30"/>
-                    <state key="normal" title="TESTE"/>
+                    <rect key="frame" x="24" y="348" width="366" height="80"/>
+                    <color key="backgroundColor" name="AccentColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="Usv-dE-rtY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="23"/>
+                    <state key="normal" title="TESTE">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
-                        <action selector="buttonTap:" destination="-1" eventType="touchUpInside" id="3pm-LL-h7r"/>
+                        <action selector="servicesTapButton:" destination="-1" eventType="touchUpInside" id="3R9-MT-Z2F"/>
                     </connections>
                 </button>
             </subviews>
@@ -51,7 +70,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bGW-2i-7af" secondAttribute="trailing" constant="24" id="EDp-2N-fmq"/>
                 <constraint firstItem="Bo9-aY-nT4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="JYS-q8-bVw"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="82A-QX-S5W" secondAttribute="bottom" priority="250" constant="496" id="LV0-HU-7p8"/>
-                <constraint firstItem="bGW-2i-7af" firstAttribute="top" secondItem="Hfl-qy-LVd" secondAttribute="bottom" constant="15.52" id="ZNe-wT-fhJ"/>
+                <constraint firstItem="bGW-2i-7af" firstAttribute="top" secondItem="Hfl-qy-LVd" secondAttribute="bottom" constant="12" id="ZNe-wT-fhJ"/>
                 <constraint firstItem="82A-QX-S5W" firstAttribute="top" secondItem="Bo9-aY-nT4" secondAttribute="bottom" constant="120" id="aQ2-DV-cXj"/>
                 <constraint firstItem="Hfl-qy-LVd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="bfJ-m4-asb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bo9-aY-nT4" secondAttribute="trailing" constant="24" id="c2e-Qg-ACr"/>
@@ -65,6 +84,12 @@
         </view>
     </objects>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,6 +9,7 @@ target 'app-register-cpf' do
   pod 'SwiftLint'
   pod 'Alamofire'
   pod 'SDWebImage', '~> 5.2.1'
+  pod "VMaskTextField"
 
   target 'app-register-cpfTests' do
     inherit! :search_paths
