@@ -15,9 +15,13 @@ enum Strings {
     static let titleListiningNavigationBar = "Listagem CPF"
     static let avoid = ""
     static let okAlertButton = "Ok"
-    static let titleRegisterAlertButton = "Falha ao registrar CPF"
-    static let messageRegisterAlertButton = "Favor inserir apenas números"
-    static let messageLessNumbersRegisterAlertButton = "É necessário inserir 11 números"
+    static let titleAlertFailureRegister = "Falha ao registrar CPF"
+    static let messageAlertInsertOnlyNumbers = "Favor inserir apenas números"
+    static let messageAlertLessNumbers = "É necessário inserir 11 números"
+    static let textListingCpf = "CPF: "
+    static let textListingDate = "Data: "
+    static let titleSucessRegister = "Sucesso ao registrar CPF"
+    static let messageAlertFailureRegister = "Ocrreu algum problema no registro do CPF"
 }
 
 enum StringsCoreData {

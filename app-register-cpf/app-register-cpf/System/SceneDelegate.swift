@@ -41,6 +41,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func createRegisterNavigationController() -> UINavigationController {
+        
+    
+        
         let registerVC = RegisterCpfViewController()
         registerVC.title = Strings.titleRegisterNavigationBar
         registerVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 0)

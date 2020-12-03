@@ -33,9 +33,7 @@ class RegisterCpfViewModel {
         
         do {
             try self.context.save()
-            print("Sucesso ao salvar anotação")
-            print(textField.text)
-        } catch let erro as Error {
+        } catch let erro {
             print(erro.localizedDescription)
         }
     }

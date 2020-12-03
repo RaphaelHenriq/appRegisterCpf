@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ListingCpfViewController: UIViewController {
+class ListingCpfViewController: BaseViewController {
     
     // MARK: - Outlets
     
@@ -23,7 +23,7 @@ class ListingCpfViewController: UIViewController {
         super.viewDidLoad()
         self.configureTableView()
         self.viewModel.coreData()
-        
+        self.configureRightButtontNavigationBar()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -61,11 +61,25 @@ extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.listingTableView.dequeueReusableCell(ofType: ItemListingTableViewCell.self, for: indexPath)
         let cpf = self.viewModel.Cpf[indexPath.row]
-        let cpfData = String(describing: cpf.value(forKey: StringsCoreData.dateAttribute))
         let cpfText = cpf.value(forKey: StringsCoreData.textAttribute) as? String ?? Strings.avoid
-        
+        let cpfData = self.viewModel.formatDate(date: cpf.value(forKey: StringsCoreData.dateAttribute) as Any)
         cell.passData(cpf: cpfText, date: cpfData)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            let index = indexPath.row
+            let cpf = self.viewModel.Cpf[index]
+            
+            
+            self.viewModel.context.delete(cpf)
+            self.viewModel.Cpf.remove(at: index)
+            
+            self.listingTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.viewModel.reSaveCpf()
+            
+        }
     }
     
     

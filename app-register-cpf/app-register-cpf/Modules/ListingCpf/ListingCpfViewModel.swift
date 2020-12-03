@@ -13,7 +13,7 @@ class ListingCpfViewModel {
     
     // MARK: - Class properties
     
-    private var context: NSManagedObjectContext!
+    var context: NSManagedObjectContext!
     
     // MARK: - Public properties
     
@@ -32,7 +32,22 @@ class ListingCpfViewModel {
             let requisitionGet = try context.fetch(requisition)
             self.Cpf = requisitionGet as! [NSManagedObject]
             reloadTableView.reloadData()
-        } catch let erro as Error {
+        } catch let erro {
+            print(erro.localizedDescription)
+        }
+    }
+    
+    func formatDate(date: Any) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm:ss"
+        let dateFormat = dateFormatter.string(from: date as! Date)
+        return dateFormat
+    }
+    
+    func reSaveCpf() {
+        do {
+            try self.context.save()
+        } catch let erro {
             print(erro.localizedDescription)
         }
     }

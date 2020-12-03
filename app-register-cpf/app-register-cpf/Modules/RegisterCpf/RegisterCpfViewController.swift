@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterCpfViewController: UIViewController {
+class RegisterCpfViewController: BaseViewController {
     
     // MARK: - Outlets
     
@@ -38,6 +38,7 @@ class RegisterCpfViewController: UIViewController {
         self.layoutViewController()
         self.viewModel.coreData()
         self.numberTextField.delegate = self
+        
     }
     
     // MARK: - Class methods
@@ -58,17 +59,18 @@ class RegisterCpfViewController: UIViewController {
     }
     
     private func statusTextFieldWhenTapSave() {
-        let limitNumberTextField = textFieldShouldReturn(textField: self.numberTextField)
+        let limitNumberTextField = textFieldShouldReturn(self.numberTextField)
         let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: self.numberTextField)
         switch enumTextField {
         case .saveCpf:
+            self.showAlertCommon(title: Strings.titleSucessRegister, message: nil, handler: nil)
             self.numberTextField.text = Strings.avoid
             
         case .lessCharacters:
-            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageLessNumbersRegisterAlertButton, handler: nil)
+            self.showAlertCommon(title: Strings.titleAlertFailureRegister, message: Strings.messageAlertLessNumbers, handler: nil)
             
         case .onlyNumbers:
-            self.showAlertCommon(title: Strings.titleRegisterAlertButton, message: Strings.messageRegisterAlertButton, handler: nil)
+            self.showAlertCommon(title: Strings.titleAlertFailureRegister, message: Strings.messageAlertInsertOnlyNumbers, handler: nil)
             self.numberTextField.text = Strings.avoid
         }
     }
@@ -98,7 +100,7 @@ extension RegisterCpfViewController: UITextFieldDelegate {
         return count <= 11
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField.text!.count < 11 {
             self.limitNumber = false
         } else if textField.text!.count == 11 {
