@@ -22,8 +22,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>RegisterCpfViewController</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ProximaNova-Bold.ttf</string>

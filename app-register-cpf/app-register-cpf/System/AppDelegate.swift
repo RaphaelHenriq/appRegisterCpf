@@ -10,15 +10,28 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+    
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        let tabBarVc = UITabBarController()
+//        
+//        let registerCpfViewController = RegisterCpfViewController()
+//        let listingCpfViewController = ListingCpfViewController()
+//        
+//        tabBarVc.setViewControllers([registerCpfViewController, listingCpfViewController], animated: false)
+//        
+////        let tabBarViewController = TabBarController()
+//        
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//        window?.rootViewController = tabBarVc
+        
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
+    // MARK: - UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
