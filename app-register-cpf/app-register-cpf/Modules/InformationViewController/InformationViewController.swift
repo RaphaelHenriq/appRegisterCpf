@@ -40,18 +40,18 @@ class InformationViewController: UIViewController {
     // MARK: - Class methods
     
     private func configureLabels() {
-        self.titleLabel.text = StringsInformationView.titleInformationLabel
+        self.titleLabel.text = StringsInformationVC.titleInformationLabel
         
         switch self.enumIdInfo {
         case .registerVC:
             self.descriptionSecondLabel.isHidden = false
-            self.descriptionFirstLabel.text = StringsInformationView.descriptionInformationSaveCpfLabel
-            self.descriptionSecondLabel.text = StringsInformationView.descriptionInformationServicesLabel
+            self.descriptionFirstLabel.text = StringsInformationVC.descriptionInformationSaveCpfLabel
+            self.descriptionSecondLabel.text = StringsInformationVC.descriptionInformationServicesLabel
             self.topImageView.image = UIImage(systemName: "rectangle.and.pencil.and.ellipsis")
             
         case .listingVC:
             self.descriptionSecondLabel.isHidden = true
-            self.descriptionFirstLabel.text = StringsInformationView.descriptionInformationDeleteLabel
+            self.descriptionFirstLabel.text = StringsInformationVC.descriptionInformationDeleteLabel
             self.topImageView.image = UIImage(systemName: "tray.full.fill")
         case .none:
             break

@@ -45,9 +45,9 @@ class RegisterCpfViewController: BaseViewController {
     // MARK: - Class methods
     
     private func configureContent() {
-        self.numberLabel.text = Strings.numberLabel
-        self.servicesButton.setTitle(Strings.servicesButton, for: .normal)
-        self.saveNumberButton.setTitle(Strings.saveNumberButton, for: .normal)
+        self.numberLabel.text = StringsRegisterVC.numberLabel
+        self.servicesButton.setTitle(StringsRegisterVC.servicesButton, for: .normal)
+        self.saveNumberButton.setTitle(StringsRegisterVC.saveNumberButton, for: .normal)
     }
     
     private func layoutViewController() {
@@ -64,15 +64,15 @@ class RegisterCpfViewController: BaseViewController {
         let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: self.numberTextField)
         switch enumTextField {
         case .saveCpf:
-            self.showAlertCommon(title: Strings.titleSucessRegister, message: nil, handler: nil)
-            self.numberTextField.text = Strings.avoid
+            self.showAlertCommon(title: StringsAlerts.titleSucessRegister, message: nil, handler: nil)
+            self.numberTextField.text = StringsAlerts.avoid
             
         case .lessCharacters:
-            self.showAlertCommon(title: Strings.titleAlertFailureRegister, message: Strings.messageAlertLessNumbers, handler: nil)
+            self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertLessNumbers, handler: nil)
             
         case .onlyNumbers:
-            self.showAlertCommon(title: Strings.titleAlertFailureRegister, message: Strings.messageAlertInsertOnlyNumbers, handler: nil)
-            self.numberTextField.text = Strings.avoid
+            self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertInsertOnlyNumbers, handler: nil)
+            self.numberTextField.text = StringsAlerts.avoid
         }
     }
 

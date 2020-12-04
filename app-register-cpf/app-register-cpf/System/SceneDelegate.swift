@@ -42,15 +42,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func createRegisterNavigationController() -> UINavigationController {
         let registerVC = RegisterCpfViewController()
-        registerVC.title = Strings.titleRegisterNavigationBar
-        registerVC.tabBarItem = UITabBarItem(title: Strings.titleRegisterNavigationBar, image: UIImage(systemName: "rectangle.and.pencil.and.ellipsis"), tag: 0)
+        registerVC.title = StringsNavigationBar.titleRegisterNavigationBar
+        registerVC.tabBarItem = UITabBarItem(title: StringsNavigationBar.titleRegisterNavigationBar, image: UIImage(systemName: "rectangle.and.pencil.and.ellipsis"), tag: 0)
         return UINavigationController(rootViewController: registerVC)
     }
     
     func createListiningNavigationController() -> UINavigationController {
         let listiningVC = ListingCpfViewController()
-        listiningVC.title = Strings.titleListiningNavigationBar
-        listiningVC.tabBarItem = UITabBarItem(title: Strings.titleListiningNavigationBar, image: UIImage(systemName: "tray.full.fill"), tag: 1)
+        listiningVC.title = StringsNavigationBar.titleListiningNavigationBar
+        listiningVC.tabBarItem = UITabBarItem(title: StringsNavigationBar.titleListiningNavigationBar, image: UIImage(systemName: "tray.full.fill"), tag: 1)
         return UINavigationController(rootViewController: listiningVC)
     }
 

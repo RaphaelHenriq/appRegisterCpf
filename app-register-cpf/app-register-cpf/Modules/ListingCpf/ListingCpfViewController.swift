@@ -63,7 +63,7 @@ extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.listingTableView.dequeueReusableCell(ofType: ItemListingTableViewCell.self, for: indexPath)
         let cpf = self.viewModel.Cpf[indexPath.row]
-        let cpfText = cpf.value(forKey: StringsCoreData.textAttribute) as? String ?? Strings.avoid
+        let cpfText = cpf.value(forKey: StringsCoreData.textAttribute) as? String ?? StringsAlerts.avoid
         let cpfData = self.viewModel.formatDate(date: cpf.value(forKey: StringsCoreData.dateAttribute) as Any)
         cell.passData(cpf: cpfText, date: cpfData)
         return cell

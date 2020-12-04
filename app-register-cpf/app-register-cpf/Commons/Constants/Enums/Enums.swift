@@ -1,8 +1,8 @@
 //
-//  Constants.swift
+//  Enums.swift
 //  app-register-cpf
 //
-//  Created by Raphael Henrique on 12/3/20.
+//  Created by Raphael Henrique on 12/4/20.
 //
 
 import Foundation

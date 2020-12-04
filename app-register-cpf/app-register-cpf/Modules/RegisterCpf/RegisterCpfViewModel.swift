@@ -34,7 +34,7 @@ class RegisterCpfViewModel {
     
     func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: UITextField) -> textFieldCpf {
         
-        if (String(textField.text ?? Strings.avoid).isInt) {
+        if (String(textField.text ?? StringsAlerts.avoid).isInt) {
             if limitAcceptedTextView {
                 self.saveCpf(textField: textField)
                 return .saveCpf
