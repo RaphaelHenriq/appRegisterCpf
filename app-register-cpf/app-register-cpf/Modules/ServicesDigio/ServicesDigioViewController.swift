@@ -62,11 +62,20 @@ class ServicesDigioViewController: UIViewController {
 
 extension ServicesDigioViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        if collectionView == self.spotlightCollectionView {
+            
+        } else {
+            
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        if collectionView == self.spotlightCollectionView {
+            
+        } else {
+            
+        }
     }
+
     
 }

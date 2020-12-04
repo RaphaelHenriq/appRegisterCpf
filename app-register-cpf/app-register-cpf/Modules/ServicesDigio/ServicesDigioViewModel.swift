@@ -22,6 +22,12 @@ class ServicesDigioViewModel {
     // MARK: - Public properties
     
     weak var delegate: ServicesDigioViewModelDelegate?
+    var data: ServicesDigioModel?
+    var imagesSpotlight: [String] = []
+    var imagesProduct: [String] = []
+    var digioCash: Cash?
+    var spotlight: [Spotlight] = []
+    var product: [Product] = []
     
     // MARK: - Init methods
     
@@ -29,15 +35,20 @@ class ServicesDigioViewModel {
         self.provider = provider
     }
     
-    // MARK: - nClass methods
+    // MARK: - Class methods
     
-    private func refresContent() {
-        
+    private func refresContent(data: ServicesDigioModel) {
+        self.data = data
     }
     
     // MARK: - Public methods
     
     func fetchData() {
-        
+        self.provider.getServicesDigioData { (data) in
+            self.refresContent(data: data)
+            self.delegate?.successResponse()
+        } errorCallBack: { (Error) in
+            self.delegate?.errorResponse()
+        }
     }
 }

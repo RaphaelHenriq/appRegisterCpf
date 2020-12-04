@@ -12,6 +12,9 @@
 		9162E9A4257942F800626A0A /* ItemListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */; };
 		9162E9A92579963C00626A0A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9162E9A82579963C00626A0A /* BaseViewController.swift */; };
 		919B38C7257ABBB600445546 /* ServicesDigioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */; };
+		919B39A2257AD74F00445546 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A1257AD74F00445546 /* ServiceError.swift */; };
+		919B39AA257AD7C400445546 /* ConnectivityInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A9257AD7C400445546 /* ConnectivityInternet.swift */; };
+		919B39B0257AD80000445546 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39AF257AD80000445546 /* Urls.swift */; };
 		91F7BE1D2577383900965278 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE1C2577383900965278 /* AppDelegate.swift */; };
 		91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE1E2577383900965278 /* SceneDelegate.swift */; };
 		91F7BE262577383A00965278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE252577383A00965278 /* Assets.xcassets */; };
@@ -86,6 +89,9 @@
 		9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListingTableViewCell.xib; sourceTree = "<group>"; };
 		9162E9A82579963C00626A0A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioViewModel.swift; sourceTree = "<group>"; };
+		919B39A1257AD74F00445546 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		919B39A9257AD7C400445546 /* ConnectivityInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityInternet.swift; sourceTree = "<group>"; };
+		919B39AF257AD80000445546 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
 		91F7BE192577383900965278 /* app-register-cpf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "app-register-cpf.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7BE1C2577383900965278 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F7BE1E2577383900965278 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,6 +188,14 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		919B39AE257AD7F300445546 /* Urls */ = {
+			isa = PBXGroup;
+			children = (
+				919B39AF257AD80000445546 /* Urls.swift */,
+			);
+			path = Urls;
+			sourceTree = "<group>";
+		};
 		91F7BE102577383900965278 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				91FA76FB257AB0E400ABD8F1 /* ServicesDigioProvider.swift */,
+				919B39A1257AD74F00445546 /* ServiceError.swift */,
+				919B39A9257AD7C400445546 /* ConnectivityInternet.swift */,
 			);
 			path = NetworkingService;
 			sourceTree = "<group>";
@@ -274,6 +290,7 @@
 		91F7BE552577388B00965278 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				919B39AE257AD7F300445546 /* Urls */,
 				91FA770B257AB3FA00ABD8F1 /* Enums */,
 				91F7BFE225786A6800965278 /* Strings */,
 			);
@@ -732,6 +749,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				919B39A2257AD74F00445546 /* ServiceError.swift in Sources */,
 				91FA75F8257A7EB400ABD8F1 /* InformationViewController.swift in Sources */,
 				9162E9A3257942F800626A0A /* ItemListingTableViewCell.swift in Sources */,
 				91FA770D257AB40A00ABD8F1 /* Enums.swift in Sources */,
@@ -746,7 +764,9 @@
 				91F7BFC12578587E00965278 /* ListingCpfViewController.swift in Sources */,
 				91FA764D257A9E5100ABD8F1 /* ServicesDigioViewController.swift in Sources */,
 				91FA7646257A97C900ABD8F1 /* Extensions.swift in Sources */,
+				919B39B0257AD80000445546 /* Urls.swift in Sources */,
 				91F7BEB02577408E00965278 /* RegisterCpfViewController.swift in Sources */,
+				919B39AA257AD7C400445546 /* ConnectivityInternet.swift in Sources */,
 				91FA7668257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift in Sources */,
 				91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */,
 				91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */,

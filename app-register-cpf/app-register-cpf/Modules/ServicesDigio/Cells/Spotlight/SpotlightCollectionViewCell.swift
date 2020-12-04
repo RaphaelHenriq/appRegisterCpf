@@ -18,7 +18,7 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var spotlightView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var spotlightImageView: UIImageView!
     
     // MARK: - Class properties
     
@@ -48,8 +48,8 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Public methods
     
-    func passData() {
-
+    func passData(_ data: Spotlight) {
+        self.nameSpotlight = data.name
+        self.spotlightImageView.cacheImageSDWebImage(from: data.bannerURL, contentMode: .scaleAspectFill, completion: nil)
     }
-
 }

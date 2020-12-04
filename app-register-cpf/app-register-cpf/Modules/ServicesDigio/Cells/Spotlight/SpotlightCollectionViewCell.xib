@@ -55,8 +55,8 @@
             </constraints>
             <size key="customSize" width="262" height="181"/>
             <connections>
-                <outlet property="imageView" destination="02a-4q-FYr" id="pDY-za-g5h"/>
                 <outlet property="shadowView" destination="GJa-nJ-575" id="l98-9h-bgW"/>
+                <outlet property="spotlightImageView" destination="02a-4q-FYr" id="pDY-za-g5h"/>
                 <outlet property="spotlightView" destination="E31-Gl-0Os" id="JQC-dX-5gp"/>
             </connections>
             <point key="canvasLocation" x="217.39130434782609" y="91.40625"/>

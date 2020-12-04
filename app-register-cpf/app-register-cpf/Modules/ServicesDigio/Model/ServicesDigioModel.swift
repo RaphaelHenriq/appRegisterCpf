@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - HomeModel
 
-struct HomeModel: Codable {
+struct ServicesDigioModel: Codable {
     var spotlight: [Spotlight]?
     var products: [Product]?
     var cash: Cash?

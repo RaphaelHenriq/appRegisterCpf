@@ -47,8 +47,10 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Public properties
     
-    func passData() {
-        
+    func passData(_ data: Product) {
+        self.nameProduct = data.name
+        self.productImageView.cacheImageSDWebImage(from: data.imageURL, contentMode: .scaleAspectFill, completion: nil)
     }
+
 
 }
