@@ -24,8 +24,16 @@ enum Strings {
     static let messageAlertFailureRegister = "Ocrreu algum problema no registro do CPF"
 }
 
+enum StringsInformationView {
+    static let titleInformationLabel = "Dicas de Uso:"
+    static let descriptionInformationSaveCpfLabel = " - Para salvar um CPF, insira apenas 11 números e pressione em salvar."
+    static let descriptionInformationServicesLabel = " - Para conhecer serviços da Digio, pressione o botão Serviços Digio."
+    static let descriptionInformationDeleteLabel = " - Para apagar um CPF, deslize para a esquerda."
+}
+
 enum StringsCoreData {
     static let cpfEntity = "Cpf"
     static let textAttribute = "text"
     static let dateAttribute = "date"
+    static let dateFormat = "dd/MM/yyyy - hh:mm:ss"
 }

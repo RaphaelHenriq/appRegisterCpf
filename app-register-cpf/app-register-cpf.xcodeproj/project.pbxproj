@@ -40,8 +40,10 @@
 		91F7BFC12578587E00965278 /* ListingCpfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BFBF2578587E00965278 /* ListingCpfViewController.swift */; };
 		91F7BFC22578587E00965278 /* ListingCpfViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BFC02578587E00965278 /* ListingCpfViewController.xib */; };
 		91F7BFE425786A7900965278 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BFE325786A7900965278 /* Strings.swift */; };
-		91F7BFEC2578721500965278 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BFEB2578721500965278 /* Extensions.swift */; };
 		91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 91F7C0192578895900965278 /* app_register_cpf.xcdatamodeld */; };
+		91FA75F8257A7EB400ABD8F1 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA75F6257A7EB400ABD8F1 /* InformationViewController.swift */; };
+		91FA75F9257A7EB400ABD8F1 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */; };
+		91FA7646257A97C900ABD8F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA7645257A97C900ABD8F1 /* Extensions.swift */; };
 		9359ABB0C109C257CA1153E1 /* Pods_app_register_cpf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AFE7EBBB0F96F42243A682 /* Pods_app_register_cpf.framework */; };
 		E86FA79F37D4B4564147CD24 /* Pods_app_register_cpf_app_register_cpfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA6B5BB5A90A4C3EBC4B026 /* Pods_app_register_cpf_app_register_cpfUITests.framework */; };
 /* End PBXBuildFile section */
@@ -109,8 +111,10 @@
 		91F7BFBF2578587E00965278 /* ListingCpfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingCpfViewController.swift; sourceTree = "<group>"; };
 		91F7BFC02578587E00965278 /* ListingCpfViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListingCpfViewController.xib; sourceTree = "<group>"; };
 		91F7BFE325786A7900965278 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
-		91F7BFEB2578721500965278 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		91F7C01A2578895900965278 /* app_register_cpf.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = app_register_cpf.xcdatamodel; sourceTree = "<group>"; };
+		91FA75F6257A7EB400ABD8F1 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
+		91FA7645257A97C900ABD8F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9C954052E2D6B17161E4122B /* Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig"; path = "Target Support Files/Pods-app-register-cpf-app-register-cpfUITests/Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACA6B5BB5A90A4C3EBC4B026 /* Pods_app_register_cpf_app_register_cpfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_register_cpf_app_register_cpfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -229,6 +233,7 @@
 		91F7BE522577386000965278 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				91F7BFB6257855AA00965278 /* Extensions */,
 				9162E9AD25799AD000626A0A /* BaseViewController */,
 				91F7BE552577388B00965278 /* Constants */,
 				91F7BE542577387E00965278 /* NetworkingService */,
@@ -240,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9162E98925793F0100626A0A /* CoreData */,
+				91FA75C2257A642300ABD8F1 /* InformationViewController */,
 				91F7BE6625773A7E00965278 /* RegisterCpf */,
 				91F7BE6725773A8D00965278 /* ListingCpf */,
 				91F7BE6825773AA000965278 /* ServiceRegisterCpf */,
@@ -257,7 +263,6 @@
 		91F7BE552577388B00965278 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				91F7BFB6257855AA00965278 /* Extensions */,
 				9162E94725792B7300626A0A /* Constants.swift */,
 			);
 			path = Constants;
@@ -346,7 +351,7 @@
 		91F7BFB6257855AA00965278 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				91F7BFEB2578721500965278 /* Extensions.swift */,
+				91FA7645257A97C900ABD8F1 /* Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +362,15 @@
 				91F7BFE325786A7900965278 /* Strings.swift */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		91FA75C2257A642300ABD8F1 /* InformationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				91FA75F6257A7EB400ABD8F1 /* InformationViewController.swift */,
+				91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */,
+			);
+			path = InformationViewController;
 			sourceTree = "<group>";
 		};
 		C8837B5406235583DE5A0CAF /* Frameworks */ = {
@@ -511,6 +525,7 @@
 				91F7BEA225773F1300965278 /* Roboto-Thin.ttf in Resources */,
 				91F7BEAA25773F1300965278 /* ProximaNova-Bold.ttf in Resources */,
 				91F7BFC22578587E00965278 /* ListingCpfViewController.xib in Resources */,
+				91FA75F9257A7EB400ABD8F1 /* InformationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,14 +670,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FA75F8257A7EB400ABD8F1 /* InformationViewController.swift in Sources */,
 				9162E9A3257942F800626A0A /* ItemListingTableViewCell.swift in Sources */,
 				91F7BE1D2577383900965278 /* AppDelegate.swift in Sources */,
-				91F7BFEC2578721500965278 /* Extensions.swift in Sources */,
 				91F7BFAA257854A200965278 /* ListingCpfViewModel.swift in Sources */,
 				91F7BFE425786A7900965278 /* Strings.swift in Sources */,
 				9162E9A92579963C00626A0A /* BaseViewController.swift in Sources */,
 				91F7BFC12578587E00965278 /* ListingCpfViewController.swift in Sources */,
 				9162E94825792B7300626A0A /* Constants.swift in Sources */,
+				91FA7646257A97C900ABD8F1 /* Extensions.swift in Sources */,
 				91F7BEB02577408E00965278 /* RegisterCpfViewController.swift in Sources */,
 				91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */,
 				91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */,

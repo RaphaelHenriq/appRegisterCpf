@@ -15,14 +15,6 @@ class RegisterCpfViewModel {
     
     private var context: NSManagedObjectContext!
     
-    // MARK: - Public properties
-    
-    enum textFieldCpf{
-        case lessCharacters
-        case onlyNumbers
-        case saveCpf
-    }
-    
     // MARK: - Class methods
     
     private func saveCpf(textField: UITextField) {

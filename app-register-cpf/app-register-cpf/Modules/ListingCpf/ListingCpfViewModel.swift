@@ -39,7 +39,7 @@ class ListingCpfViewModel {
     
     func formatDate(date: Any) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy - hh:mm:ss"
+        dateFormatter.dateFormat = StringsCoreData.dateFormat
         let dateFormat = dateFormatter.string(from: date as! Date)
         return dateFormat
     }

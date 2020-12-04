@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ListingCpfViewController: BaseViewController {
     
@@ -16,6 +17,7 @@ class ListingCpfViewController: BaseViewController {
     // MARK: - Class properties
     
     private let viewModel: ListingCpfViewModel
+    private let enumInformation: idInformation = .listingVC
     
     // MARK: - Init Cycle
     
@@ -23,7 +25,7 @@ class ListingCpfViewController: BaseViewController {
         super.viewDidLoad()
         self.configureTableView()
         self.viewModel.coreData()
-        self.configureRightButtontNavigationBar()
+        self.configureRightButtonNavigationBar(enumIdInformation: enumInformation)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +44,7 @@ class ListingCpfViewController: BaseViewController {
     // MARK: - Class methods
     
     private func configureTableView() {
-        view.backgroundColor = .white
+        self.listingTableView.backgroundColor = .systemGray5
         self.listingTableView.delegate = self
         self.listingTableView.dataSource = self
         self.listingTableView.registerCell(ItemListingTableViewCell.className)
@@ -81,6 +83,4 @@ extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
     }
-    
-    
 }

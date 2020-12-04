@@ -30,6 +30,14 @@ extension UIViewController {
       alert.addAction(btnOk)
       self.present(alert, animated: true, completion: nil)
     }
+    
+    func modalVC(_ viewController: UIViewController) {
+      let navigationController = UINavigationController(rootViewController: viewController)
+      navigationController.modalPresentationStyle = .formSheet
+      navigationController.modalTransitionStyle = .coverVertical
+      present(navigationController, animated: true)
+      navigationController.providesPresentationContextTransitionStyle = true
+    }
 }
 
 extension NSObject {

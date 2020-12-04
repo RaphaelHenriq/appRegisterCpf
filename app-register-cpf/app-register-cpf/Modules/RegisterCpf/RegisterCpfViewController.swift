@@ -20,6 +20,7 @@ class RegisterCpfViewController: BaseViewController {
     
     private let viewModel: RegisterCpfViewModel
     private var limitNumber: Bool = false
+    private let enumIdInformation: idInformation = .registerVC
     
     // MARK: - Init cycle
     
@@ -38,7 +39,7 @@ class RegisterCpfViewController: BaseViewController {
         self.layoutViewController()
         self.viewModel.coreData()
         self.numberTextField.delegate = self
-        
+        self.configureRightButtonNavigationBar(enumIdInformation: self.enumIdInformation)
     }
     
     // MARK: - Class methods
@@ -50,8 +51,8 @@ class RegisterCpfViewController: BaseViewController {
     }
     
     private func layoutViewController() {
-        self.view.backgroundColor = .white
-        self.saveNumberButton.backgroundColor = .systemGray
+        self.view.backgroundColor = .systemGray5
+        self.saveNumberButton.backgroundColor = .systemBlue
         self.saveNumberButton.allCorner(cornerRadius: 10)
         self.servicesButton.backgroundColor = .systemBlue
         self.servicesButton.allCorner(cornerRadius: 10)
