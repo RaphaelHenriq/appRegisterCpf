@@ -79,7 +79,9 @@ class RegisterCpfViewController: BaseViewController {
     // MARK: - Actions
     
     @IBAction func servicesTapButton(_ sender: Any) {
-        print("Click Services")
+//        print("Click Services")
+        let vc = ServicesDigioViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func saveTapButton(_ sender: Any) {

@@ -24,6 +24,12 @@ enum Strings {
     static let messageAlertFailureRegister = "Ocrreu algum problema no registro do CPF"
 }
 
+enum StringsServicesDigio {
+    static let labelDigio = "digio"
+    static let labelCash = "Cash"
+    static let labelProduct = "Produtos"
+}
+
 enum StringsInformationView {
     static let titleInformationLabel = "Dicas de Uso:"
     static let descriptionInformationSaveCpfLabel = " - Para salvar um CPF, insira apenas 11 números e pressione em salvar."

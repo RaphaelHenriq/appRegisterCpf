@@ -44,6 +44,14 @@
 		91FA75F8257A7EB400ABD8F1 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA75F6257A7EB400ABD8F1 /* InformationViewController.swift */; };
 		91FA75F9257A7EB400ABD8F1 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */; };
 		91FA7646257A97C900ABD8F1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA7645257A97C900ABD8F1 /* Extensions.swift */; };
+		91FA764D257A9E5100ABD8F1 /* ServicesDigioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA764B257A9E5100ABD8F1 /* ServicesDigioViewController.swift */; };
+		91FA764E257A9E5100ABD8F1 /* ServicesDigioViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA764C257A9E5100ABD8F1 /* ServicesDigioViewController.xib */; };
+		91FA7656257A9E5F00ABD8F1 /* ServicesDigioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA7655257A9E5F00ABD8F1 /* ServicesDigioViewModel.swift */; };
+		91FA765D257A9E9D00ABD8F1 /* ServicesDigioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA765C257A9E9D00ABD8F1 /* ServicesDigioModel.swift */; };
+		91FA7668257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA7666257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift */; };
+		91FA7669257A9EDC00ABD8F1 /* ProductsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA7667257A9EDC00ABD8F1 /* ProductsCollectionViewCell.xib */; };
+		91FA7672257A9EED00ABD8F1 /* SpotlightCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FA7670257A9EED00ABD8F1 /* SpotlightCollectionViewCell.swift */; };
+		91FA7673257A9EED00ABD8F1 /* SpotlightCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91FA7671257A9EED00ABD8F1 /* SpotlightCollectionViewCell.xib */; };
 		9359ABB0C109C257CA1153E1 /* Pods_app_register_cpf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AFE7EBBB0F96F42243A682 /* Pods_app_register_cpf.framework */; };
 		E86FA79F37D4B4564147CD24 /* Pods_app_register_cpf_app_register_cpfUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA6B5BB5A90A4C3EBC4B026 /* Pods_app_register_cpf_app_register_cpfUITests.framework */; };
 /* End PBXBuildFile section */
@@ -115,6 +123,14 @@
 		91FA75F6257A7EB400ABD8F1 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 		91FA7645257A97C900ABD8F1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		91FA764B257A9E5100ABD8F1 /* ServicesDigioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioViewController.swift; sourceTree = "<group>"; };
+		91FA764C257A9E5100ABD8F1 /* ServicesDigioViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesDigioViewController.xib; sourceTree = "<group>"; };
+		91FA7655257A9E5F00ABD8F1 /* ServicesDigioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioViewModel.swift; sourceTree = "<group>"; };
+		91FA765C257A9E9D00ABD8F1 /* ServicesDigioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioModel.swift; sourceTree = "<group>"; };
+		91FA7666257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		91FA7667257A9EDC00ABD8F1 /* ProductsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsCollectionViewCell.xib; sourceTree = "<group>"; };
+		91FA7670257A9EED00ABD8F1 /* SpotlightCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightCollectionViewCell.swift; sourceTree = "<group>"; };
+		91FA7671257A9EED00ABD8F1 /* SpotlightCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpotlightCollectionViewCell.xib; sourceTree = "<group>"; };
 		9C954052E2D6B17161E4122B /* Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig"; path = "Target Support Files/Pods-app-register-cpf-app-register-cpfUITests/Pods-app-register-cpf-app-register-cpfUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ACA6B5BB5A90A4C3EBC4B026 /* Pods_app_register_cpf_app_register_cpfUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_app_register_cpf_app_register_cpfUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -248,7 +264,6 @@
 				91FA75C2257A642300ABD8F1 /* InformationViewController */,
 				91F7BE6625773A7E00965278 /* RegisterCpf */,
 				91F7BE6725773A8D00965278 /* ListingCpf */,
-				91F7BE6825773AA000965278 /* ServiceRegisterCpf */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -326,6 +341,7 @@
 				91F7BEAE2577408E00965278 /* RegisterCpfViewController.swift */,
 				91F7BEAF2577408E00965278 /* RegisterCpfViewController.xib */,
 				91F7BEB8257740A400965278 /* RegisterCpfViewModel.swift */,
+				91FA764A257A9E1400ABD8F1 /* ServicesDigio */,
 			);
 			path = RegisterCpf;
 			sourceTree = "<group>";
@@ -339,13 +355,6 @@
 				9162E9A0257942D600626A0A /* Cell */,
 			);
 			path = ListingCpf;
-			sourceTree = "<group>";
-		};
-		91F7BE6825773AA000965278 /* ServiceRegisterCpf */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServiceRegisterCpf;
 			sourceTree = "<group>";
 		};
 		91F7BFB6257855AA00965278 /* Extensions */ = {
@@ -371,6 +380,53 @@
 				91FA75F7257A7EB400ABD8F1 /* InformationViewController.xib */,
 			);
 			path = InformationViewController;
+			sourceTree = "<group>";
+		};
+		91FA764A257A9E1400ABD8F1 /* ServicesDigio */ = {
+			isa = PBXGroup;
+			children = (
+				91FA764B257A9E5100ABD8F1 /* ServicesDigioViewController.swift */,
+				91FA764C257A9E5100ABD8F1 /* ServicesDigioViewController.xib */,
+				91FA7655257A9E5F00ABD8F1 /* ServicesDigioViewModel.swift */,
+				91FA765B257A9E7F00ABD8F1 /* Model */,
+				91FA765A257A9E7900ABD8F1 /* Cells */,
+			);
+			path = ServicesDigio;
+			sourceTree = "<group>";
+		};
+		91FA765A257A9E7900ABD8F1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				91FA7665257A9EBC00ABD8F1 /* Products */,
+				91FA7664257A9EB000ABD8F1 /* Spotlight */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		91FA765B257A9E7F00ABD8F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91FA765C257A9E9D00ABD8F1 /* ServicesDigioModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91FA7664257A9EB000ABD8F1 /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				91FA7670257A9EED00ABD8F1 /* SpotlightCollectionViewCell.swift */,
+				91FA7671257A9EED00ABD8F1 /* SpotlightCollectionViewCell.xib */,
+			);
+			path = Spotlight;
+			sourceTree = "<group>";
+		};
+		91FA7665257A9EBC00ABD8F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91FA7666257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift */,
+				91FA7667257A9EDC00ABD8F1 /* ProductsCollectionViewCell.xib */,
+			);
+			path = Products;
 			sourceTree = "<group>";
 		};
 		C8837B5406235583DE5A0CAF /* Frameworks */ = {
@@ -508,10 +564,12 @@
 				91F7BEA425773F1300965278 /* ProximaNova-Regular.ttf in Resources */,
 				91F7BEA325773F1300965278 /* ProximaNova-Light.ttf in Resources */,
 				91F7BEA925773F1300965278 /* RobotoCondensed-Light.ttf in Resources */,
+				91FA764E257A9E5100ABD8F1 /* ServicesDigioViewController.xib in Resources */,
 				91F7BEA825773F1300965278 /* Roboto-Light.ttf in Resources */,
 				91F7BE9F25773F1300965278 /* ProximaNova-Thin.ttf in Resources */,
 				9162E9A4257942F800626A0A /* ItemListingTableViewCell.xib in Resources */,
 				91F7BE2C2577383B00965278 /* LaunchScreen.storyboard in Resources */,
+				91FA7669257A9EDC00ABD8F1 /* ProductsCollectionViewCell.xib in Resources */,
 				91F7BE292577383B00965278 /* Preview Assets.xcassets in Resources */,
 				91F7BEA025773F1300965278 /* Roboto-Medium.ttf in Resources */,
 				91F7BE9E25773F1300965278 /* Roboto-Bold.ttf in Resources */,
@@ -524,6 +582,7 @@
 				91F7BE262577383A00965278 /* Assets.xcassets in Resources */,
 				91F7BEA225773F1300965278 /* Roboto-Thin.ttf in Resources */,
 				91F7BEAA25773F1300965278 /* ProximaNova-Bold.ttf in Resources */,
+				91FA7673257A9EED00ABD8F1 /* SpotlightCollectionViewCell.xib in Resources */,
 				91F7BFC22578587E00965278 /* ListingCpfViewController.xib in Resources */,
 				91FA75F9257A7EB400ABD8F1 /* InformationViewController.xib in Resources */,
 			);
@@ -673,13 +732,18 @@
 				91FA75F8257A7EB400ABD8F1 /* InformationViewController.swift in Sources */,
 				9162E9A3257942F800626A0A /* ItemListingTableViewCell.swift in Sources */,
 				91F7BE1D2577383900965278 /* AppDelegate.swift in Sources */,
+				91FA7672257A9EED00ABD8F1 /* SpotlightCollectionViewCell.swift in Sources */,
 				91F7BFAA257854A200965278 /* ListingCpfViewModel.swift in Sources */,
+				91FA765D257A9E9D00ABD8F1 /* ServicesDigioModel.swift in Sources */,
 				91F7BFE425786A7900965278 /* Strings.swift in Sources */,
 				9162E9A92579963C00626A0A /* BaseViewController.swift in Sources */,
 				91F7BFC12578587E00965278 /* ListingCpfViewController.swift in Sources */,
+				91FA764D257A9E5100ABD8F1 /* ServicesDigioViewController.swift in Sources */,
+				91FA7656257A9E5F00ABD8F1 /* ServicesDigioViewModel.swift in Sources */,
 				9162E94825792B7300626A0A /* Constants.swift in Sources */,
 				91FA7646257A97C900ABD8F1 /* Extensions.swift in Sources */,
 				91F7BEB02577408E00965278 /* RegisterCpfViewController.swift in Sources */,
+				91FA7668257A9EDC00ABD8F1 /* ProductsCollectionViewCell.swift in Sources */,
 				91F7BE1F2577383900965278 /* SceneDelegate.swift in Sources */,
 				91F7C01B2578895900965278 /* app_register_cpf.xcdatamodeld in Sources */,
 				91F7BEB9257740A400965278 /* RegisterCpfViewModel.swift in Sources */,
