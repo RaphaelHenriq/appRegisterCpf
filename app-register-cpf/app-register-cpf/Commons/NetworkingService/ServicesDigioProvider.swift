@@ -13,6 +13,7 @@ protocol ServicesDigioProviderDelegate {
 
 class ServicesDigioProvider: ServicesDigioProviderDelegate {
     func getServicesDigioData(successCallBack: @escaping (ServicesDigioModel) -> Void, errorCallBack: @escaping (Error) -> Void) {
+        
         guard Connectivity.isConnectedToInternet else {
             errorCallBack(ServiceError.noConnection)
             print(ServiceError.noConnection.localizedDescription)

@@ -10,7 +10,7 @@ import UIKit
 
 protocol ServicesDigioViewModelDelegate: NSObject {
     func successResponse()
-    func errorResponse()
+    func errorResponse(error: ServiceError)
 }
 
 class ServicesDigioViewModel {
@@ -49,11 +49,11 @@ class ServicesDigioViewModel {
     // MARK: - Public methods
     
     func fetchData() {
-        self.provider.getServicesDigioData { (data) in
-            self.refresContent(data: data)
-            self.delegate?.successResponse()
-        } errorCallBack: { (Error) in
-            self.delegate?.errorResponse()
+        self.provider.getServicesDigioData(successCallBack: {[weak self] (data) in
+            self?.refresContent(data: data)
+            self?.delegate?.successResponse()
+        }) {[weak self] (error) in
+            self?.delegate?.errorResponse(error: error as! ServiceError)
         }
     }
 }

@@ -32,18 +32,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJM-47-AdX" customClass="MaskTextField" customModule="app_register_cpf" customModuleProvider="target">
-                    <rect key="frame" x="24" y="130" width="366" height="34"/>
+                    <rect key="frame" x="24" y="107" width="366" height="34"/>
                     <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="20"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-qy-LVd">
-                    <rect key="frame" x="24" y="92" width="54" height="26"/>
+                    <rect key="frame" x="24" y="68" width="54" height="27"/>
                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="22"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-aY-nT4">
-                    <rect key="frame" x="24" y="176" width="366" height="40"/>
+                    <rect key="frame" x="24" y="153" width="366" height="42"/>
                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="24"/>
                     <state key="normal" title="Button">
                         <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
@@ -53,7 +53,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82A-QX-S5W">
-                    <rect key="frame" x="24" y="336" width="366" height="80"/>
+                    <rect key="frame" x="24" y="315" width="366" height="80"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="80" id="Usv-dE-rtY"/>
@@ -79,7 +79,7 @@
                 <constraint firstItem="Hfl-qy-LVd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="bfJ-m4-asb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Bo9-aY-nT4" secondAttribute="trailing" constant="24" id="c2e-Qg-ACr"/>
                 <constraint firstItem="wJM-47-AdX" firstAttribute="top" secondItem="Hfl-qy-LVd" secondAttribute="bottom" constant="12" id="dsS-Zh-2av"/>
-                <constraint firstItem="Hfl-qy-LVd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="fX9-cm-0HX"/>
+                <constraint firstItem="Hfl-qy-LVd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="fX9-cm-0HX"/>
                 <constraint firstItem="82A-QX-S5W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="nx2-zi-og9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="82A-QX-S5W" secondAttribute="trailing" constant="24" id="wFk-HA-DX6"/>
             </constraints>
