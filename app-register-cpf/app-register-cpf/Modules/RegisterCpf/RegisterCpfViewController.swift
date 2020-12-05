@@ -79,7 +79,6 @@ class RegisterCpfViewController: BaseViewController {
     // MARK: - Actions
     
     @IBAction func servicesTapButton(_ sender: Any) {
-//        print("Click Services")
         let vc = ServicesDigioViewController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -87,7 +86,6 @@ class RegisterCpfViewController: BaseViewController {
     @IBAction func saveTapButton(_ sender: Any) {
         self.statusTextFieldWhenTapSave()
     }
-    
 }
 
 // MARK: - Extensions

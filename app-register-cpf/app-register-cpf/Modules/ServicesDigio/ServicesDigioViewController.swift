@@ -19,6 +19,8 @@ class ServicesDigioViewController: UIViewController {
     @IBOutlet weak var imageViewDigioCash: UIImageView!
     @IBOutlet weak var productsLabel: UILabel!
     @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet weak var refreshLabel: UILabel!
+    @IBOutlet weak var refreshButton: UIButton!
     
     // MARK: - Class properties
 
@@ -70,6 +72,8 @@ class ServicesDigioViewController: UIViewController {
         self.userImageView.layer.borderWidth = 2
         self.userImageView.layer.borderColor = UIColor.black.cgColor
         self.userImageView.clipsToBounds = true
+        self.refreshButton.backgroundColor = .systemBlue
+        self.refreshButton.allCorner(cornerRadius: 10)
         
         let tapGestureImageDigioCash = UITapGestureRecognizer(target: self, action: #selector(tapButtonDigioCash))
         self.imageViewDigioCash.addGestureRecognizer(tapGestureImageDigioCash)
@@ -93,6 +97,28 @@ class ServicesDigioViewController: UIViewController {
         self.labelDigioCash.attributedText = attributedString
     }
     
+    private func showErrorScreen() {
+        self.viewContent.isHidden = false
+        self.refreshLabel.text = StringsAlerts.labelRefresh
+        self.refreshButton.setTitle(StringsAlerts.textButtonRefresh, for: .normal)
+        self.refreshLabel.isHidden = false
+        self.refreshButton.isHidden = false
+        self.userLabel.isHidden = true
+        self.productsLabel.isHidden = true
+        self.labelDigioCash.isHidden = true
+        self.userImageView.isHidden = true
+    }
+    
+    private func showSucessScreen() {
+        self.viewContent.isHidden = false
+        self.refreshLabel.isHidden = true
+        self.refreshButton.isHidden = true
+        self.userLabel.isHidden = false
+        self.productsLabel.isHidden = false
+        self.labelDigioCash.isHidden = false
+        self.userImageView.isHidden = false
+    }
+    
     // MARK: - Action
     
     @objc
@@ -101,7 +127,12 @@ class ServicesDigioViewController: UIViewController {
             print("Ir para tela \(nameScreen)")
         }
     }
+    
+    @IBAction func tapRefreshButton(_ sender: Any) {
+        self.viewModel.fetchData()
+    }
 }
+
 // MARK: - Extensions
 
 extension ServicesDigioViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -177,11 +208,14 @@ extension ServicesDigioViewController: ServicesDigioViewModelDelegate {
             self.dataServicesDigio()
             self.spotlightCollectionView.reloadData()
             self.productCollectionView.reloadData()
+            self.showSucessScreen()
         }
     }
     
-    func errorResponse() {
+    func errorResponse(error: ServiceError) {
         DispatchQueue.main.async {
+            self.showErrorScreen()
+            self.showAlertCommon(title: StringsAlerts.errorAlert, message: nil, handler: nil)
         }
     }
 }

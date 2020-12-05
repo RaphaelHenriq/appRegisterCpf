@@ -26,6 +26,9 @@ enum StringsAlerts {
     static let messageAlertLessNumbers = "É necessário inserir 11 números"
     static let titleSucessRegister = "Sucesso ao registrar CPF"
     static let messageAlertFailureRegister = "Ocrreu algum problema no registro do CPF"
+    static let labelRefresh = "Não foi possível atualizar a tela"
+    static let textButtonRefresh = "Atualizar"
+    static let errorAlert = "Sem conexão à internet"
 }
 
 enum StringsServicesDigioVC {
