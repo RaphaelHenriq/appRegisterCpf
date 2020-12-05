@@ -39,6 +39,11 @@ class ServicesDigioViewModel {
     
     private func refresContent(data: ServicesDigioModel) {
         self.data = data
+        self.imagesSpotlight = data.spotlight?.compactMap({ $0.bannerURL }) ?? []
+        self.spotlight = data.spotlight ?? []
+        self.digioCash = data.cash
+        self.imagesProduct = data.products?.compactMap({ $0.imageURL }) ?? []
+        self.product = data.products ?? []
     }
     
     // MARK: - Public methods

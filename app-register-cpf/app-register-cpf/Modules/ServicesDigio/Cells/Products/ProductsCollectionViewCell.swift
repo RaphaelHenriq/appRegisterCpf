@@ -35,6 +35,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         self.contentView.backgroundColor = .clear
         self.productView.backgroundColor = .white
         self.productView.allCorner(cornerRadius: 15)
+        self.shadowView.shadowView()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapButton))
         self.productView.addGestureRecognizer(tapGesture)

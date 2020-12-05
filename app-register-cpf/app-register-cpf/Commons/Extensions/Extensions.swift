@@ -7,11 +7,22 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension UIView {
     func allCorner(cornerRadius: Double) {
         self.clipsToBounds = true
         self.layer.cornerRadius = CGFloat(cornerRadius)
+    }
+    
+    func shadowView() {
+        self.backgroundColor = .clear
+        self.layer.cornerRadius = 15
+        self.layer.shadowRadius = 3.0
+        self.layer.shadowOpacity = 0.4
+        self.layer.shadowOffset = .zero
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.masksToBounds = false
     }
 }
 

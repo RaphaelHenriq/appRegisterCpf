@@ -36,7 +36,8 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
         self.contentView.backgroundColor = .clear
         self.spotlightView.backgroundColor = .white
         self.spotlightView.allCorner(cornerRadius: 15)
-
+        self.shadowView.shadowView()
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapButton))
         self.spotlightView.addGestureRecognizer(tapGesture)
     }

@@ -29,9 +29,11 @@ enum StringsAlerts {
 }
 
 enum StringsServicesDigioVC {
+    static let user = "Raphael Dev iOS Klever"
     static let labelDigio = "digio"
     static let labelCash = "Cash"
     static let labelProduct = "Produtos"
+    static let imageUser = "UserKlever"
 }
 
 enum StringsListiningVC {
