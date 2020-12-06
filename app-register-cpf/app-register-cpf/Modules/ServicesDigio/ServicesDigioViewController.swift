@@ -67,7 +67,6 @@ class ServicesDigioViewController: UIViewController {
         self.view.backgroundColor = .systemGray5
         self.viewContent.backgroundColor = .clear
         self.imageViewDigioCash.allCorner(cornerRadius: 10)
-//        self.imageViewDigioCash.shadowView()
         self.userImageView.layer.cornerRadius = 0.5 * userImageView.bounds.size.width
         self.userImageView.layer.borderWidth = 2
         self.userImageView.layer.borderColor = UIColor.black.cgColor

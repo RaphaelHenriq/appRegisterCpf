@@ -40,7 +40,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-Lg-MPy">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="671.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="647.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8xH-sG-frL">
                                     <rect key="frame" x="24" y="24" width="56" height="56"/>
@@ -91,13 +91,13 @@
                                     </collectionViewFlowLayout>
                                 </collectionView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQd-xP-OAp">
-                                    <rect key="frame" x="182.5" y="323.5" width="49.5" height="24.5"/>
+                                    <rect key="frame" x="182.5" y="279" width="49.5" height="24.5"/>
                                     <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-QG-iFg">
-                                    <rect key="frame" x="20" y="364" width="374" height="37"/>
+                                    <rect key="frame" x="20" y="319.5" width="374" height="37"/>
                                     <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
                                     <state key="normal" title="Button">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -129,10 +129,10 @@
                                 <constraint firstItem="eQd-xP-OAp" firstAttribute="centerX" secondItem="eOt-Lg-MPy" secondAttribute="centerX" id="gRL-jv-3JU"/>
                                 <constraint firstItem="Y4x-QG-iFg" firstAttribute="centerX" secondItem="eQd-xP-OAp" secondAttribute="centerX" id="i6m-PV-AdJ"/>
                                 <constraint firstItem="8xH-sG-frL" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="24" id="ia5-RZ-vhG"/>
-                                <constraint firstItem="eQd-xP-OAp" firstAttribute="centerY" secondItem="eOt-Lg-MPy" secondAttribute="centerY" id="kZe-9x-mea"/>
+                                <constraint firstItem="eQd-xP-OAp" firstAttribute="bottom" secondItem="eOt-Lg-MPy" secondAttribute="centerY" constant="-20" id="kZe-9x-mea"/>
                                 <constraint firstItem="pYC-Sn-1xo" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="24" id="q0o-dT-H3c"/>
                                 <constraint firstItem="8xH-sG-frL" firstAttribute="top" secondItem="eOt-Lg-MPy" secondAttribute="top" constant="24" id="qpg-mt-0Zz"/>
-                                <constraint firstAttribute="bottom" secondItem="9VH-Mf-fsM" secondAttribute="bottom" constant="48" id="tAE-Xc-xxr"/>
+                                <constraint firstAttribute="bottom" secondItem="9VH-Mf-fsM" secondAttribute="bottom" constant="24" id="tAE-Xc-xxr"/>
                                 <constraint firstItem="9VH-Mf-fsM" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" id="tWL-YD-bZQ"/>
                                 <constraint firstItem="lXt-ju-bZU" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="24" id="uxk-Y7-b2a"/>
                                 <constraint firstItem="HlR-lY-0Rw" firstAttribute="leading" secondItem="8xH-sG-frL" secondAttribute="trailing" constant="8" id="wbh-ft-Ftv"/>
