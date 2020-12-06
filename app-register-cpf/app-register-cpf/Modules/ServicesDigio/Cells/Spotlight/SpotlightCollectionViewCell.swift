@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 
 protocol SpotlightCollectionViewCellDelegate: class {
-    func tapButtonSpotlight(name: String?)
+    func tapButtonSpotlight(nameScreen: String?)
 }
 
 class SpotlightCollectionViewCell: UICollectionViewCell {
@@ -44,7 +44,7 @@ class SpotlightCollectionViewCell: UICollectionViewCell {
     
     @objc
     private func tapButton() {
-        self.delegate?.tapButtonSpotlight(name: self.nameSpotlight)
+        self.delegate?.tapButtonSpotlight(nameScreen: self.nameSpotlight)
     }
     
     // MARK: - Public methods

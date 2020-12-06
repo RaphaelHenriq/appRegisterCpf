@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProductsCollectionViewCellDelegate: class {
-    func tapButtonProduct(name: String?)
+    func tapButtonProduct(nameScreen: String?)
 }
 
 class ProductsCollectionViewCell: UICollectionViewCell {
@@ -43,7 +43,7 @@ class ProductsCollectionViewCell: UICollectionViewCell {
     
     @objc
     private func tapButton() {
-        self.delegate?.tapButtonProduct(name: self.nameProduct)
+        self.delegate?.tapButtonProduct(nameScreen: self.nameProduct)
     }
     
     // MARK: - Public properties

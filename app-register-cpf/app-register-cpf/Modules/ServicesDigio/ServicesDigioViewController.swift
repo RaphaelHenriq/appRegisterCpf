@@ -67,14 +67,14 @@ class ServicesDigioViewController: UIViewController {
         self.view.backgroundColor = .systemGray5
         self.viewContent.backgroundColor = .clear
         self.imageViewDigioCash.allCorner(cornerRadius: 10)
-        self.imageViewDigioCash.shadowView()
+//        self.imageViewDigioCash.shadowView()
         self.userImageView.layer.cornerRadius = 0.5 * userImageView.bounds.size.width
         self.userImageView.layer.borderWidth = 2
         self.userImageView.layer.borderColor = UIColor.black.cgColor
         self.userImageView.clipsToBounds = true
         self.refreshButton.backgroundColor = .systemBlue
         self.refreshButton.allCorner(cornerRadius: 10)
-        
+        self.imageViewDigioCash.isUserInteractionEnabled = true
         let tapGestureImageDigioCash = UITapGestureRecognizer(target: self, action: #selector(tapButtonDigioCash))
         self.imageViewDigioCash.addGestureRecognizer(tapGestureImageDigioCash)
     }
@@ -171,34 +171,40 @@ extension ServicesDigioViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         if collectionView == self.spotlightCollectionView {
-            return 16
+            return 20
         } else {
-            return 16
+            return 13
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        let borderLeftCollection = CGFloat(19) // 24 borda da tela, menos 5 da sombra esquerda
-        let borderRightCollection = CGFloat(22) // 24 borda da tela, menos 2 da sombra direita
         
         if collectionView == self.spotlightCollectionView {
+            let borderLeftCollection = CGFloat(20) // 24 borda da tela, menos 4 da sombra esquerda
+            let borderRightCollection = CGFloat(24)
             return UIEdgeInsets(top: 0,left: borderLeftCollection,bottom: 0,right: borderRightCollection)
             
         } else {
+            let borderLeftCollection = CGFloat(15) // 24 borda da tela, menos 9 da sombra esquerda
+            let borderRightCollection = CGFloat(20) // 24 borda da tela, menos 4 da sombra direita
             return UIEdgeInsets(top: 0,left: borderLeftCollection,bottom: 0,right: borderRightCollection)
         }
     }
 }
 
 extension ServicesDigioViewController: SpotlightCollectionViewCellDelegate {
-    func tapButtonSpotlight(name: String?) {
-        print("tap")
+    func tapButtonSpotlight(nameScreen: String?) {
+        if let screen = nameScreen {
+            print("Ir para tela \(screen) do Spotlight")
+        }
     }
 }
 
 extension ServicesDigioViewController: ProductsCollectionViewCellDelegate {
-    func tapButtonProduct(name: String?) {
-        print("tap")
+    func tapButtonProduct(nameScreen: String?) {
+        if let screen = nameScreen {
+            print("Ir para tela \(screen) do Produtos")
+        }
     }
 }
 

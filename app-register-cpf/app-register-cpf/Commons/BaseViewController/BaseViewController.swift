@@ -34,12 +34,11 @@ class BaseViewController: UIViewController {
     // MARK: - Public methods
     
     func configureRightButtonNavigationBar(enumIdInformation: idInformation) {
-        let imageInfo = UIImage(named: "InformationListing")?.withRenderingMode(.alwaysTemplate)
+        let imageInfo = UIImage(systemName: "info.circle.fill")?.withRenderingMode(.alwaysTemplate)
         
         self.enumIdInfo = enumIdInformation
         let infoButton = UIBarButtonItem(image: imageInfo, style: .plain, target: self, action: #selector(openInfoModule))
           
-        self.navigationItem.rightBarButtonItem?.tintColor = #colorLiteral(red: 1, green: 0.7294117647, blue: 0, alpha: 1)
         self.navigationItem.rightBarButtonItem = infoButton
     }
 }
