@@ -60,10 +60,12 @@ class RegisterCpfViewController: BaseViewController {
     }
     
     private func statusTextFieldWhenTapSave() {
-        let limitNumberTextField = textFieldShouldReturn(self.numberTextField)
-        let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: self.numberTextField)
+        let limitNumberTextField = self.textFieldShouldReturn(self.numberTextField)
+        let textField = self.numberTextField.text ?? StringsAlerts.avoid
+        let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
         switch enumTextField {
         case .saveCpf:
+            self.viewModel.saveCpf(textField: textField)
             self.showAlertCommon(title: StringsAlerts.titleSucessRegister, message: nil, handler: nil)
             self.numberTextField.text = StringsAlerts.avoid
             

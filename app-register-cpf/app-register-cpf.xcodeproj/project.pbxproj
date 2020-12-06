@@ -11,6 +11,8 @@
 		9162E9A3257942F800626A0A /* ItemListingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9162E9A1257942F800626A0A /* ItemListingTableViewCell.swift */; };
 		9162E9A4257942F800626A0A /* ItemListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */; };
 		9162E9A92579963C00626A0A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9162E9A82579963C00626A0A /* BaseViewController.swift */; };
+		917F44D5257D2ECC006FB8E1 /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F44D4257D2ECC006FB8E1 /* TextFieldMock.swift */; };
+		917F4512257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */; };
 		919B38C7257ABBB600445546 /* ServicesDigioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */; };
 		919B39A2257AD74F00445546 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A1257AD74F00445546 /* ServiceError.swift */; };
 		919B39AA257AD7C400445546 /* ConnectivityInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A9257AD7C400445546 /* ConnectivityInternet.swift */; };
@@ -20,7 +22,6 @@
 		91F7BE262577383A00965278 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE252577383A00965278 /* Assets.xcassets */; };
 		91F7BE292577383B00965278 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE282577383B00965278 /* Preview Assets.xcassets */; };
 		91F7BE2C2577383B00965278 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE2A2577383B00965278 /* LaunchScreen.storyboard */; };
-		91F7BE372577383B00965278 /* app_register_cpfTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE362577383B00965278 /* app_register_cpfTests.swift */; };
 		91F7BE422577383B00965278 /* app_register_cpfUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7BE412577383B00965278 /* app_register_cpfUITests.swift */; };
 		91F7BE9D25773F1300965278 /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE8F25773F1200965278 /* RobotoCondensed-Bold.ttf */; };
 		91F7BE9E25773F1300965278 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 91F7BE9025773F1200965278 /* Roboto-Bold.ttf */; };
@@ -88,6 +89,8 @@
 		9162E9A1257942F800626A0A /* ItemListingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListingTableViewCell.swift; sourceTree = "<group>"; };
 		9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListingTableViewCell.xib; sourceTree = "<group>"; };
 		9162E9A82579963C00626A0A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		917F44D4257D2ECC006FB8E1 /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
+		917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesTextFieldCpfTest.swift; sourceTree = "<group>"; };
 		919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioViewModel.swift; sourceTree = "<group>"; };
 		919B39A1257AD74F00445546 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		919B39A9257AD7C400445546 /* ConnectivityInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityInternet.swift; sourceTree = "<group>"; };
@@ -100,7 +103,6 @@
 		91F7BE2B2577383B00965278 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F7BE2D2577383B00965278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F7BE322577383B00965278 /* app-register-cpfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-register-cpfTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F7BE362577383B00965278 /* app_register_cpfTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_register_cpfTests.swift; sourceTree = "<group>"; };
 		91F7BE382577383B00965278 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F7BE3D2577383B00965278 /* app-register-cpfUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "app-register-cpfUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F7BE412577383B00965278 /* app_register_cpfUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app_register_cpfUITests.swift; sourceTree = "<group>"; };
@@ -188,6 +190,22 @@
 			path = BaseViewController;
 			sourceTree = "<group>";
 		};
+		917F4484257D2781006FB8E1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				917F44D4257D2ECC006FB8E1 /* TextFieldMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		917F44A2257D2CC0006FB8E1 /* RegisterCpf */ = {
+			isa = PBXGroup;
+			children = (
+				917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */,
+			);
+			path = RegisterCpf;
+			sourceTree = "<group>";
+		};
 		919B39AE257AD7F300445546 /* Urls */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,8 +258,9 @@
 		91F7BE352577383B00965278 /* app-register-cpfTests */ = {
 			isa = PBXGroup;
 			children = (
-				91F7BE362577383B00965278 /* app_register_cpfTests.swift */,
 				91F7BE382577383B00965278 /* Info.plist */,
+				917F44A2257D2CC0006FB8E1 /* RegisterCpf */,
+				917F4484257D2781006FB8E1 /* Mocks */,
 			);
 			path = "app-register-cpfTests";
 			sourceTree = "<group>";
@@ -778,7 +797,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F7BE372577383B00965278 /* app_register_cpfTests.swift in Sources */,
+				917F44D5257D2ECC006FB8E1 /* TextFieldMock.swift in Sources */,
+				917F4512257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -981,7 +1001,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VP5K42628N;
 				INFOPLIST_FILE = "app-register-cpfTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1003,7 +1025,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VP5K42628N;
 				INFOPLIST_FILE = "app-register-cpfTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (

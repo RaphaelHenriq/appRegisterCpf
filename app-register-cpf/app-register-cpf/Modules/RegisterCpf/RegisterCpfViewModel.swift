@@ -15,12 +15,12 @@ class RegisterCpfViewModel {
     
     private var context: NSManagedObjectContext!
     
-    // MARK: - Class methods
+    // MARK: - Public methods
     
-    private func saveCpf(textField: UITextField) {
+    func saveCpf(textField: String) {
         let newCpf = NSEntityDescription.insertNewObject(forEntityName: StringsCoreData.cpfEntity, into: self.context)
         
-        newCpf.setValue(textField.text, forKey: StringsCoreData.textAttribute)
+        newCpf.setValue(textField, forKey: StringsCoreData.textAttribute)
         newCpf.setValue(NSDate(), forKey: StringsCoreData.dateAttribute)
         
         do {
@@ -30,15 +30,11 @@ class RegisterCpfViewModel {
         }
     }
     
-    // MARK: - Public methods
-    
-    func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: UITextField) -> textFieldCpf {
-        
-        if (String(textField.text ?? StringsAlerts.avoid).isInt) {
+    func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: String) -> textFieldCpf {
+        if (String(textField).isInt) {
             if limitAcceptedTextView {
-                self.saveCpf(textField: textField)
                 return .saveCpf
-                
+
             } else {
                 return .lessCharacters
             }
