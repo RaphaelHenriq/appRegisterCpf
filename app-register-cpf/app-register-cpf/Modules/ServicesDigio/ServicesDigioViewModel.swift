@@ -56,4 +56,8 @@ class ServicesDigioViewModel {
             self?.delegate?.errorResponse(error: error as! ServiceError)
         }
     }
+    
+    func refreshData() -> () {
+        self.fetchData()
+    }
 }

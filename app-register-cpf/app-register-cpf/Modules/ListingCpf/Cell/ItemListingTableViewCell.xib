@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,23 +37,39 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="51Y-XV-BnT">
+                        <rect key="frame" x="24" y="94.5" width="326" height="1"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="hHa-2p-NeF"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="51Y-XV-BnT" secondAttribute="bottom" priority="250" id="0OX-af-J85"/>
                     <constraint firstAttribute="trailing" secondItem="2Do-qY-U3A" secondAttribute="trailing" constant="24" id="4ZE-od-eSc"/>
                     <constraint firstItem="2Do-qY-U3A" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="6ar-hi-Sr4"/>
                     <constraint firstItem="Zbu-BN-etc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="BKj-cx-4ui"/>
                     <constraint firstItem="Zbu-BN-etc" firstAttribute="top" secondItem="2Do-qY-U3A" secondAttribute="bottom" constant="12" id="EKd-dg-TRi"/>
-                    <constraint firstAttribute="bottom" secondItem="Zbu-BN-etc" secondAttribute="bottom" priority="250" constant="12" id="Wow-mK-faF"/>
+                    <constraint firstAttribute="trailing" secondItem="51Y-XV-BnT" secondAttribute="trailing" constant="24" id="Es4-Yk-H8A"/>
                     <constraint firstItem="2Do-qY-U3A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="e1e-tL-hhZ"/>
                     <constraint firstAttribute="trailing" secondItem="Zbu-BN-etc" secondAttribute="trailing" constant="24" id="i9e-II-8QA"/>
+                    <constraint firstItem="51Y-XV-BnT" firstAttribute="top" secondItem="Zbu-BN-etc" secondAttribute="bottom" constant="12" id="p0P-tb-syz"/>
+                    <constraint firstItem="51Y-XV-BnT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="vOI-tW-OXN"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cpfLabel" destination="2Do-qY-U3A" id="0mt-RR-lFf"/>
                 <outlet property="dateLabel" destination="Zbu-BN-etc" id="QuD-k7-4RZ"/>
+                <outlet property="separationView" destination="51Y-XV-BnT" id="Nwb-fP-2MJ"/>
             </connections>
             <point key="canvasLocation" x="102.89855072463769" y="77.008928571428569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

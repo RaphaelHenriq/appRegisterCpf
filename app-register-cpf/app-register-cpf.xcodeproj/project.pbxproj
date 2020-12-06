@@ -12,7 +12,7 @@
 		9162E9A4257942F800626A0A /* ItemListingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */; };
 		9162E9A92579963C00626A0A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9162E9A82579963C00626A0A /* BaseViewController.swift */; };
 		917F44D5257D2ECC006FB8E1 /* TextFieldMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F44D4257D2ECC006FB8E1 /* TextFieldMock.swift */; };
-		917F4512257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */; };
+		917F4512257D44E7006FB8E1 /* RegisterCpfViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917F4511257D44E7006FB8E1 /* RegisterCpfViewModelTest.swift */; };
 		919B38C7257ABBB600445546 /* ServicesDigioViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */; };
 		919B39A2257AD74F00445546 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A1257AD74F00445546 /* ServiceError.swift */; };
 		919B39AA257AD7C400445546 /* ConnectivityInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 919B39A9257AD7C400445546 /* ConnectivityInternet.swift */; };
@@ -90,7 +90,7 @@
 		9162E9A2257942F800626A0A /* ItemListingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemListingTableViewCell.xib; sourceTree = "<group>"; };
 		9162E9A82579963C00626A0A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		917F44D4257D2ECC006FB8E1 /* TextFieldMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMock.swift; sourceTree = "<group>"; };
-		917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasesTextFieldCpfTest.swift; sourceTree = "<group>"; };
+		917F4511257D44E7006FB8E1 /* RegisterCpfViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCpfViewModelTest.swift; sourceTree = "<group>"; };
 		919B38C6257ABBB600445546 /* ServicesDigioViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesDigioViewModel.swift; sourceTree = "<group>"; };
 		919B39A1257AD74F00445546 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		919B39A9257AD7C400445546 /* ConnectivityInternet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectivityInternet.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 		917F44A2257D2CC0006FB8E1 /* RegisterCpf */ = {
 			isa = PBXGroup;
 			children = (
-				917F4511257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift */,
+				917F4511257D44E7006FB8E1 /* RegisterCpfViewModelTest.swift */,
 			);
 			path = RegisterCpf;
 			sourceTree = "<group>";
@@ -798,7 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				917F44D5257D2ECC006FB8E1 /* TextFieldMock.swift in Sources */,
-				917F4512257D44E7006FB8E1 /* CasesTextFieldCpfTest.swift in Sources */,
+				917F4512257D44E7006FB8E1 /* RegisterCpfViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -959,8 +959,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"app-register-cpf/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = VP5K42628N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-register-cpf/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -969,6 +971,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raphaelHenrique.app-register-cpf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -980,8 +983,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"app-register-cpf/Resources/Preview Content\"";
+				DEVELOPMENT_TEAM = VP5K42628N;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "app-register-cpf/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -990,6 +995,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.raphaelHenrique.app-register-cpf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1049,6 +1055,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VP5K42628N;
 				INFOPLIST_FILE = "app-register-cpfUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1069,6 +1076,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VP5K42628N;
 				INFOPLIST_FILE = "app-register-cpfUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -19,8 +19,7 @@ class ServicesDigioViewController: UIViewController {
     @IBOutlet weak var imageViewDigioCash: UIImageView!
     @IBOutlet weak var productsLabel: UILabel!
     @IBOutlet weak var productCollectionView: UICollectionView!
-    @IBOutlet weak var refreshLabel: UILabel!
-    @IBOutlet weak var refreshButton: UIButton!
+    @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
     
     // MARK: - Class properties
 
@@ -42,6 +41,7 @@ class ServicesDigioViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loadingActivity.startAnimating()
         self.viewModel.delegate = self
         self.configureCollectionsView()
         self.configureContentServicesDigio()
@@ -63,7 +63,6 @@ class ServicesDigioViewController: UIViewController {
     }
     
     private func configureContentServicesDigio() {
-        self.viewContent.isHidden = true
         self.view.backgroundColor = .systemGray5
         self.viewContent.backgroundColor = .clear
         self.imageViewDigioCash.allCorner(cornerRadius: 10)
@@ -71,8 +70,6 @@ class ServicesDigioViewController: UIViewController {
         self.userImageView.layer.borderWidth = 2
         self.userImageView.layer.borderColor = UIColor.black.cgColor
         self.userImageView.clipsToBounds = true
-        self.refreshButton.backgroundColor = .systemBlue
-        self.refreshButton.allCorner(cornerRadius: 10)
         self.imageViewDigioCash.isUserInteractionEnabled = true
         let tapGestureImageDigioCash = UITapGestureRecognizer(target: self, action: #selector(tapButtonDigioCash))
         self.imageViewDigioCash.addGestureRecognizer(tapGestureImageDigioCash)
@@ -84,7 +81,6 @@ class ServicesDigioViewController: UIViewController {
         self.productsLabel.text = StringsServicesDigioVC.labelProduct
         self.userImageView.image = UIImage(named: StringsServicesDigioVC.imageUser)
         self.userLabel.text = StringsServicesDigioVC.user
-        self.viewContent.isHidden = false
     }
     
     private func formatTextLabelDigioCash() {
@@ -97,25 +93,11 @@ class ServicesDigioViewController: UIViewController {
     }
     
     private func showErrorScreen() {
-        self.viewContent.isHidden = false
-        self.refreshLabel.text = StringsAlerts.labelRefresh
-        self.refreshButton.setTitle(StringsAlerts.textButtonRefresh, for: .normal)
-        self.refreshLabel.isHidden = false
-        self.refreshButton.isHidden = false
-        self.userLabel.isHidden = true
-        self.productsLabel.isHidden = true
-        self.labelDigioCash.isHidden = true
-        self.userImageView.isHidden = true
+        self.viewContent.isHidden = true
     }
     
     private func showSucessScreen() {
         self.viewContent.isHidden = false
-        self.refreshLabel.isHidden = true
-        self.refreshButton.isHidden = true
-        self.userLabel.isHidden = false
-        self.productsLabel.isHidden = false
-        self.labelDigioCash.isHidden = false
-        self.userImageView.isHidden = false
     }
     
     // MARK: - Action
@@ -125,10 +107,6 @@ class ServicesDigioViewController: UIViewController {
         if let nameScreen = self.viewModel.digioCash?.title {
             print("Ir para tela \(nameScreen)")
         }
-    }
-    
-    @IBAction func tapRefreshButton(_ sender: Any) {
-        self.viewModel.fetchData()
     }
 }
 
@@ -214,13 +192,15 @@ extension ServicesDigioViewController: ServicesDigioViewModelDelegate {
             self.spotlightCollectionView.reloadData()
             self.productCollectionView.reloadData()
             self.showSucessScreen()
+            self.loadingActivity.hidesWhenStopped = true
+            self.loadingActivity.stopAnimating()
         }
     }
     
     func errorResponse(error: ServiceError) {
         DispatchQueue.main.async {
             self.showErrorScreen()
-            self.showAlertCommon(title: StringsAlerts.errorAlert, message: nil, handler: nil)
+            self.showAlertCommon(title: StringsAlerts.errorAlert, message: nil, buttonOk: StringsAlerts.textButtonRefresh, buttonCancel: true, handler: self.viewModel.fetchData)
         }
     }
 }

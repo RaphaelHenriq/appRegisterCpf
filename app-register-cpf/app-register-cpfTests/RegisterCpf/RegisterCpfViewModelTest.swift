@@ -11,10 +11,11 @@ import Nimble
 
 @testable import app_register_cpf
 
-class CasesTextFieldCpfTest: QuickSpec {
+class RegisterCpfViewModelTest: QuickSpec {
 
     private var registerCpfViewModel: RegisterCpfViewModel!
     private var textFieldMock: TextFieldMock!
+    private var registerCpfViewController: RegisterCpfViewController!
     
     override func spec() {
         describe("DEBUG SESSION/sending events to firebase") {
@@ -23,11 +24,25 @@ class CasesTextFieldCpfTest: QuickSpec {
                 self.textFieldMock = TextFieldMock()
             }
             
-            context("status textField") {
+            context("test textFieldShouldReturn") {
+    
+                it("sending less 11 numbers") {
+                    let textField = self.textFieldMock.textFieldLessNumbers
+                    let tagLimitNumberTextField = self.registerCpfViewModel.textFieldShouldReturn(textField)
+                    expect(tagLimitNumberTextField).to(equal(false))
+                }
+                it("sending 11 numbers") {
+                    let textField = self.textFieldMock.textFieldElevenNumbers
+                    let tagLimitNumberTextField = self.registerCpfViewModel.textFieldShouldReturn(textField)
+                    expect(tagLimitNumberTextField).to(equal(true))
+                }
+            }
+            
+            context("test casesTextFieldCpf") {
     
                 it("sending save CPF") {
-                    let textField = self.textFieldMock.textFieldSaveCpf
-                    let limitNumberTextField = self.textFieldMock.textFieldShouldReturn(textField)
+                    let textField = self.textFieldMock.textFieldElevenNumbers
+                    let limitNumberTextField = self.registerCpfViewModel.textFieldShouldReturn(textField)
                     let enumStatus = self.registerCpfViewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
                     expect(enumStatus).to(equal(.saveCpf))
                 }
@@ -35,15 +50,14 @@ class CasesTextFieldCpfTest: QuickSpec {
                 it("sending less characters") {
                     
                     let textField = self.textFieldMock.textFieldLessNumbers
-                    let limitNumberTextField = self.textFieldMock.textFieldShouldReturn(textField)
-            
+                    let limitNumberTextField = self.registerCpfViewModel.textFieldShouldReturn(textField)
                     let enumStatus = self.registerCpfViewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
                     expect(enumStatus).to(equal(.lessCharacters))
                 }
                 
                 it("sending only numbers") {
                     let textField = self.textFieldMock.textFieldOnlyNumbers
-                    let limitNumberTextField = self.textFieldMock.textFieldShouldReturn(textField)
+                    let limitNumberTextField = self.registerCpfViewModel.textFieldShouldReturn(textField)
                     let enumStatus = self.registerCpfViewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
                     expect(enumStatus).to(equal(.onlyNumbers))
                 }

@@ -7,10 +7,16 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProximaNova-SemiBold.ttf">
+            <string>ProximaNova-Semibold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListingCpfViewController" customModule="app_register_cpf" customModuleProvider="target">
             <connections>
                 <outlet property="listingTableView" destination="GsU-5K-7yN" id="Jkg-Jv-tnb"/>
+                <outlet property="notListCpfLabel" destination="h6g-zV-0N4" id="32s-ca-rGj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +25,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GsU-5K-7yN">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GsU-5K-7yN">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <inset key="separatorInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
                 </tableView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6g-zV-0N4">
+                    <rect key="frame" x="24" y="436" width="366" height="24.5"/>
+                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="h6g-zV-0N4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="9vI-32-po4"/>
+                <constraint firstItem="h6g-zV-0N4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ftf-Pr-jZM"/>
                 <constraint firstItem="GsU-5K-7yN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="M05-6N-vsf"/>
+                <constraint firstItem="h6g-zV-0N4" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ngd-A4-Uap"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GsU-5K-7yN" secondAttribute="bottom" id="STS-cM-B9R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="h6g-zV-0N4" secondAttribute="trailing" constant="24" id="YeS-xj-AFC"/>
                 <constraint firstItem="GsU-5K-7yN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="b7E-QM-YR7"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GsU-5K-7yN" secondAttribute="trailing" id="d7y-Mk-YB0"/>
             </constraints>

@@ -40,8 +40,8 @@ class ListingCpfViewModel {
     func formatDate(date: Any) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = StringsCoreData.dateFormat
-        let dateFormat = dateFormatter.string(from: date as! Date)
-        return dateFormat
+        let dateFormat = dateFormatter.string(for: date)
+        return dateFormat ?? StringsAlerts.avoid
     }
     
     func reSaveCpf() {

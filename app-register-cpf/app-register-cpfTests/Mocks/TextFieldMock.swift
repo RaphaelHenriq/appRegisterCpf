@@ -11,17 +11,7 @@ import XCTest
 @testable import app_register_cpf
 
 class TextFieldMock {
-    let textFieldSaveCpf = "45585935895"
+    let textFieldElevenNumbers = "45585935895"
     let textFieldOnlyNumbers = "1daD.@-"
     let textFieldLessNumbers = "4558"
-    private var tagTextField: Bool = true
-    
-    func textFieldShouldReturn(_ textField: String) -> Bool {
-        if textField.count < 11 {
-            self.tagTextField = false
-        } else if textField.count == 11 {
-            self.tagTextField = true
-        }
-        return self.tagTextField
-    }
 }

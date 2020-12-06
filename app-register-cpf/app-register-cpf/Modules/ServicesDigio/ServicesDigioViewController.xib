@@ -20,10 +20,9 @@
             <connections>
                 <outlet property="imageViewDigioCash" destination="pYC-Sn-1xo" id="6vD-Gj-DdU"/>
                 <outlet property="labelDigioCash" destination="22h-wm-kBJ" id="qcH-4b-XZj"/>
+                <outlet property="loadingActivity" destination="WKb-2i-g5m" id="s42-LL-jgW"/>
                 <outlet property="productCollectionView" destination="9VH-Mf-fsM" id="GfZ-Sq-MDn"/>
                 <outlet property="productsLabel" destination="lXt-ju-bZU" id="kDL-Q2-14f"/>
-                <outlet property="refreshButton" destination="Y4x-QG-iFg" id="Bun-Bq-L6Z"/>
-                <outlet property="refreshLabel" destination="eQd-xP-OAp" id="eDN-eN-jBl"/>
                 <outlet property="spotlightCollectionView" destination="tlF-3S-Mb4" id="Wtr-XC-wWh"/>
                 <outlet property="userImageView" destination="8xH-sG-frL" id="AQw-fe-UaF"/>
                 <outlet property="userLabel" destination="HlR-lY-0Rw" id="dy5-l0-DXp"/>
@@ -39,6 +38,13 @@
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQp-gJ-C5s">
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-2i-g5m">
+                            <rect key="frame" x="187" y="406" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="NMW-7h-pJe"/>
+                                <constraint firstAttribute="width" constant="40" id="sDa-sr-6CS"/>
+                            </constraints>
+                        </activityIndicatorView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOt-Lg-MPy">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="647.5"/>
                             <subviews>
@@ -90,22 +96,6 @@
                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </collectionViewFlowLayout>
                                 </collectionView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQd-xP-OAp">
-                                    <rect key="frame" x="182.5" y="279" width="49.5" height="24.5"/>
-                                    <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="20"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4x-QG-iFg">
-                                    <rect key="frame" x="20" y="319.5" width="374" height="37"/>
-                                    <fontDescription key="fontDescription" name="ProximaNova-Semibold" family="Proxima Nova" pointSize="20"/>
-                                    <state key="normal" title="Button">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="tapRefreshButton:" destination="-1" eventType="touchUpInside" id="vk8-KM-2OE"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -117,19 +107,13 @@
                                 <constraint firstAttribute="trailing" secondItem="22h-wm-kBJ" secondAttribute="trailing" constant="24" id="9Cq-fa-iv0"/>
                                 <constraint firstItem="lXt-ju-bZU" firstAttribute="top" secondItem="pYC-Sn-1xo" secondAttribute="bottom" constant="24" id="AZh-SI-eFl"/>
                                 <constraint firstAttribute="trailing" secondItem="9VH-Mf-fsM" secondAttribute="trailing" id="BQI-nO-FD2"/>
-                                <constraint firstItem="Y4x-QG-iFg" firstAttribute="top" secondItem="eQd-xP-OAp" secondAttribute="bottom" constant="16" id="Eho-CP-ytS"/>
                                 <constraint firstAttribute="trailing" secondItem="HlR-lY-0Rw" secondAttribute="trailing" constant="24" id="KSR-zY-j79"/>
                                 <constraint firstItem="tlF-3S-Mb4" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" id="Qhd-Tv-Mn1"/>
                                 <constraint firstItem="22h-wm-kBJ" firstAttribute="top" secondItem="tlF-3S-Mb4" secondAttribute="bottom" constant="24" id="VjX-Z7-F7X"/>
                                 <constraint firstAttribute="trailing" secondItem="pYC-Sn-1xo" secondAttribute="trailing" constant="24" id="a48-xs-t0d"/>
                                 <constraint firstItem="tlF-3S-Mb4" firstAttribute="top" secondItem="8xH-sG-frL" secondAttribute="bottom" constant="24" id="a4g-Ze-7cc"/>
                                 <constraint firstAttribute="trailing" secondItem="lXt-ju-bZU" secondAttribute="trailing" constant="24" id="bdO-n0-rZM"/>
-                                <constraint firstItem="Y4x-QG-iFg" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="20" id="erR-TE-hFf"/>
-                                <constraint firstAttribute="trailing" secondItem="Y4x-QG-iFg" secondAttribute="trailing" constant="20" id="fLy-ly-nct"/>
-                                <constraint firstItem="eQd-xP-OAp" firstAttribute="centerX" secondItem="eOt-Lg-MPy" secondAttribute="centerX" id="gRL-jv-3JU"/>
-                                <constraint firstItem="Y4x-QG-iFg" firstAttribute="centerX" secondItem="eQd-xP-OAp" secondAttribute="centerX" id="i6m-PV-AdJ"/>
                                 <constraint firstItem="8xH-sG-frL" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="24" id="ia5-RZ-vhG"/>
-                                <constraint firstItem="eQd-xP-OAp" firstAttribute="bottom" secondItem="eOt-Lg-MPy" secondAttribute="centerY" constant="-20" id="kZe-9x-mea"/>
                                 <constraint firstItem="pYC-Sn-1xo" firstAttribute="leading" secondItem="eOt-Lg-MPy" secondAttribute="leading" constant="24" id="q0o-dT-H3c"/>
                                 <constraint firstItem="8xH-sG-frL" firstAttribute="top" secondItem="eOt-Lg-MPy" secondAttribute="top" constant="24" id="qpg-mt-0Zz"/>
                                 <constraint firstAttribute="bottom" secondItem="9VH-Mf-fsM" secondAttribute="bottom" constant="24" id="tAE-Xc-xxr"/>
@@ -141,9 +125,11 @@
                         </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="WKb-2i-g5m" firstAttribute="centerX" secondItem="VQp-gJ-C5s" secondAttribute="centerX" id="4j4-Ig-27U"/>
                         <constraint firstAttribute="trailing" secondItem="eOt-Lg-MPy" secondAttribute="trailing" id="5WP-73-4Ip"/>
                         <constraint firstItem="eOt-Lg-MPy" firstAttribute="top" secondItem="VQp-gJ-C5s" secondAttribute="top" id="EV3-hC-9Cq"/>
                         <constraint firstAttribute="bottom" secondItem="eOt-Lg-MPy" secondAttribute="bottom" id="HGg-nB-pWS"/>
+                        <constraint firstItem="WKb-2i-g5m" firstAttribute="centerY" secondItem="VQp-gJ-C5s" secondAttribute="centerY" id="Yt5-Xk-45O"/>
                         <constraint firstItem="eOt-Lg-MPy" firstAttribute="leading" secondItem="VQp-gJ-C5s" secondAttribute="leading" id="jVt-Kq-AUl"/>
                     </constraints>
                 </scrollView>

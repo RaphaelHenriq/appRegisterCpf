@@ -30,6 +30,11 @@ class RegisterCpfViewModel {
         }
     }
     
+    func coreData() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.context = appDelegate.persistentContainer.viewContext
+    }
+    
     func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: String) -> textFieldCpf {
         if (String(textField).isInt) {
             if limitAcceptedTextView {
@@ -42,12 +47,13 @@ class RegisterCpfViewModel {
         } else {
             return .onlyNumbers
         }
-        
     }
     
-    func coreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        self.context = appDelegate.persistentContainer.viewContext
+    func textFieldShouldReturn(_ textField: String) -> Bool {
+        if textField.count == 11 {
+            return true
+        } else {
+            return false
+        }
     }
-    
 }

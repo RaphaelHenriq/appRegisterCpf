@@ -13,6 +13,7 @@ class ItemListingTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cpfLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var separationView: UIView!
     
     // MARK: - Init cycle
     
@@ -30,6 +31,7 @@ class ItemListingTableViewCell: UITableViewCell {
     private func configureTableViewCell() {
         self.selectionStyle = .none
         self.backgroundColor = .clear
+        self.separationView.backgroundColor = .systemGray2
     }
     
     // MARK: - Public methods

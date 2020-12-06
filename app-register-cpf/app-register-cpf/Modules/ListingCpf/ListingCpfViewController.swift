@@ -13,6 +13,7 @@ class ListingCpfViewController: BaseViewController {
     // MARK: - Outlets
     
     @IBOutlet weak var listingTableView: UITableView!
+    @IBOutlet weak var notListCpfLabel: UILabel!
     
     // MARK: - Class properties
     
@@ -48,15 +49,19 @@ class ListingCpfViewController: BaseViewController {
         self.listingTableView.delegate = self
         self.listingTableView.dataSource = self
         self.listingTableView.registerCell(ItemListingTableViewCell.className)
+        self.notListCpfLabel.text = StringsListiningVC.textNotList
     }
-
 }
-
 
 // MARK: - Extensions
 
 extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if self.viewModel.Cpf.count == 0 {
+            self.notListCpfLabel.isHidden = false
+        } else {
+            self.notListCpfLabel.isHidden = true
+        }
         return self.viewModel.Cpf.count
     }
     

@@ -23,6 +23,9 @@ class RegisterCpfViewController: BaseViewController {
     private let enumIdInformation: idInformation = .registerVC
     
     // MARK: - Init cycle
+    @IBAction func testAction(_ sender: UITextField) {
+        print("Teste acao textField")
+    }
     
     init() {
         self.viewModel = RegisterCpfViewModel()
@@ -59,25 +62,28 @@ class RegisterCpfViewController: BaseViewController {
         self.numberTextField.delegate = self
     }
     
+    
+    
     private func statusTextFieldWhenTapSave() {
-        let limitNumberTextField = self.textFieldShouldReturn(self.numberTextField)
-        let textField = self.numberTextField.text ?? StringsAlerts.avoid
-        let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
-        switch enumTextField {
-        case .saveCpf:
-            self.viewModel.saveCpf(textField: textField)
-            self.showAlertCommon(title: StringsAlerts.titleSucessRegister, message: nil, handler: nil)
-            self.numberTextField.text = StringsAlerts.avoid
-            
-        case .lessCharacters:
-            self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertLessNumbers, handler: nil)
-            
-        case .onlyNumbers:
-            self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertInsertOnlyNumbers, handler: nil)
-            self.numberTextField.text = StringsAlerts.avoid
+        if let textField = self.numberTextField.text {
+            let limitNumberTextField = self.viewModel.textFieldShouldReturn(textField)
+            let enumTextField = self.viewModel.casesTextFieldCpf(limitAcceptedTextView: limitNumberTextField, textField: textField)
+            switch enumTextField {
+            case .saveCpf:
+                self.viewModel.saveCpf(textField: textField)
+                self.showAlertCommon(title: StringsAlerts.titleSucessRegister, message: nil, buttonOk: StringsAlerts.okAlertButton, buttonCancel: false, handler: nil)
+                self.numberTextField.text = StringsAlerts.avoid
+                
+            case .lessCharacters:
+                self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertLessNumbers, buttonOk: StringsAlerts.okAlertButton, buttonCancel: false, handler: nil)
+                
+            case .onlyNumbers:
+                self.showAlertCommon(title: StringsAlerts.titleAlertFailureRegister, message: StringsAlerts.messageAlertInsertOnlyNumbers, buttonOk: StringsAlerts.okAlertButton, buttonCancel: false, handler: nil)
+                self.numberTextField.text = StringsAlerts.avoid
+            }
         }
     }
-
+    
     // MARK: - Actions
     
     @IBAction func servicesTapButton(_ sender: Any) {
@@ -95,21 +101,11 @@ class RegisterCpfViewController: BaseViewController {
 extension RegisterCpfViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let textFieldText = textField.text,
-            let rangeOfTextToReplace = Range(range, in: textFieldText) else {
-                return false
+              let rangeOfTextToReplace = Range(range, in: textFieldText) else {
+            return false
         }
         let substringToReplace = textFieldText[rangeOfTextToReplace]
         let count = textFieldText.count - substringToReplace.count + string.count
         return count <= 11
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text!.count < 11 {
-            self.limitNumber = false
-        } else if textField.text!.count == 11 {
-            self.limitNumber = true
-        }
-        self.view.endEditing(true)
-        return self.limitNumber
     }
 }

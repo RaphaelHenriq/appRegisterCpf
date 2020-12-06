@@ -26,9 +26,10 @@ enum StringsAlerts {
     static let messageAlertLessNumbers = "É necessário inserir 11 números"
     static let titleSucessRegister = "Sucesso ao registrar CPF"
     static let messageAlertFailureRegister = "Ocrreu algum problema no registro do CPF"
-    static let labelRefresh = "Não foi possível atualizar a tela"
+    static let labelRefresh = "Não foi possível atualizar"
     static let textButtonRefresh = "Atualizar"
-    static let errorAlert = "Sem conexão à internet"
+    static let errorAlert = "Sem conexão com à internet"
+    static let cancelRefresh = "Cancelar"
 }
 
 enum StringsServicesDigioVC {
@@ -42,6 +43,7 @@ enum StringsServicesDigioVC {
 enum StringsListiningVC {
     static let textListingCpf = "CPF: "
     static let textListingDate = "Data: "
+    static let textNotList = "Não há CPFs registrados!"
 }
 
 enum StringsInformationVC {
