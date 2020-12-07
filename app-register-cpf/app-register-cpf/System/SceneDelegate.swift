@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Get the managed object context from the shared persistent container.
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        guard ((UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext) != nil else { return }
 
     }
     
@@ -84,7 +84,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-

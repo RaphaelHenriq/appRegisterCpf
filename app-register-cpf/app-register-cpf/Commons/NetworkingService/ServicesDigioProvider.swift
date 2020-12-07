@@ -37,7 +37,6 @@ class ServicesDigioProvider: ServicesDigioProviderDelegate {
 
             do {
                 let model = try JSONDecoder().decode(ServicesDigioModel.self, from: data)
-                print("sucesso provider")
                 print(model)
                 successCallBack(model)
             } catch {

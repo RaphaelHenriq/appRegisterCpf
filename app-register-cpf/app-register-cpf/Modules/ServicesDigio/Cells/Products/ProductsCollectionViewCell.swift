@@ -53,5 +53,4 @@ class ProductsCollectionViewCell: UICollectionViewCell {
         self.productImageView.cacheImageSDWebImage(from: data.imageURL, contentMode: .scaleAspectFill, completion: nil)
     }
 
-
 }

@@ -11,18 +11,15 @@ import CoreData
 
 class ListingCpfViewModel {
     
-    // MARK: - Class properties
-    
-    var context: NSManagedObjectContext!
-    
     // MARK: - Public properties
     
+    var context: NSManagedObjectContext!
     var Cpf: [NSManagedObject] = []
     
     // MARK: - Class methods
     
     func coreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         self.context = appDelegate.persistentContainer.viewContext
     }
 
@@ -30,7 +27,8 @@ class ListingCpfViewModel {
         let requisition = NSFetchRequest<NSFetchRequestResult>(entityName: "Cpf")
         do {
             let requisitionGet = try context.fetch(requisition)
-            self.Cpf = requisitionGet as! [NSManagedObject]
+            guard let cpf = requisitionGet as? [NSManagedObject] else { return }
+            self.Cpf = cpf
             reloadTableView.reloadData()
         } catch let erro {
             print(erro.localizedDescription)

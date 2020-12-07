@@ -1,0 +1,55 @@
+disabled_rules:
+  - colon
+  - comma
+  - control_statement
+  - trailing_whitespace
+  - line_length
+  - variable_name
+  - empty_count
+  - large_tuple
+  - function_body_length
+  - multiple_closures_with_trailing_closure
+opt_in_rules:
+  - empty_string
+  - redundant_void_return
+  - unused_closure_parameter
+  - unused_method_parameter
+excluded:
+  - Carthage
+  - Pods
+  - Source/ExcludedFolder
+  - Source/ExcludedFile.swift
+  - Source/*/ExcludedFile.swift
+  - SwiftLint/Common/3rdPartyLib
+analyzer_rules:
+  - explicit_self
+force_cast: warning
+force_try:
+  severity: warning
+type_body_length:
+  - 200 # warning
+  - 300 # error
+file_length:
+  warning: 500
+  error: 1200
+  ignore_comment_only_lines: true
+function_parameter_count:
+  warning: 8
+  error: 10
+type_name:
+  min_length: 2
+  max_length:
+    warning: 30
+    error: 50
+  excluded: iPhone
+cyclomatic_complexity:
+    warning: 20
+    error: 35
+identifier_name:
+  min_length:
+    error: 1
+  excluded:
+    - id
+    - URL
+    - GlobalAPIKey
+reporter: "xcode" # reporter type (xcode, sonarqube)

@@ -53,11 +53,8 @@ class ServicesDigioViewModel {
             self?.refresContent(data: data)
             self?.delegate?.successResponse()
         }) {[weak self] (error) in
-            self?.delegate?.errorResponse(error: error as! ServiceError)
+            guard let error = error as? ServiceError else { return }
+            self?.delegate?.errorResponse(error: error)
         }
-    }
-    
-    func refreshData() -> () {
-        self.fetchData()
     }
 }

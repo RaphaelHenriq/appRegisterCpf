@@ -19,13 +19,9 @@ class RegisterCpfViewController: BaseViewController {
     // MARK: - Class properties
     
     private let viewModel: RegisterCpfViewModel
-    private var limitNumber: Bool = false
-    private let enumIdInformation: idInformation = .registerVC
+    private let enumIdInformation: IdInformation = .registerVC
     
     // MARK: - Init cycle
-    @IBAction func testAction(_ sender: UITextField) {
-        print("Teste acao textField")
-    }
     
     init() {
         self.viewModel = RegisterCpfViewModel()
@@ -48,6 +44,7 @@ class RegisterCpfViewController: BaseViewController {
     // MARK: - Class methods
     
     private func configureContent() {
+        self.hideKeyboardWhenTappedAround()
         self.numberLabel.text = StringsRegisterVC.numberLabel
         self.servicesButton.setTitle(StringsRegisterVC.servicesButton, for: .normal)
         self.saveNumberButton.setTitle(StringsRegisterVC.saveNumberButton, for: .normal)
@@ -61,8 +58,6 @@ class RegisterCpfViewController: BaseViewController {
         self.servicesButton.allCorner(cornerRadius: 10)
         self.numberTextField.delegate = self
     }
-    
-    
     
     private func statusTextFieldWhenTapSave() {
         if let textField = self.numberTextField.text {
@@ -83,7 +78,7 @@ class RegisterCpfViewController: BaseViewController {
             }
         }
     }
-    
+
     // MARK: - Actions
     
     @IBAction func servicesTapButton(_ sender: Any) {

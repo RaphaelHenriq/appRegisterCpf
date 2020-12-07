@@ -8,12 +8,11 @@
 import Foundation
 import UIKit
 
-
 class BaseViewController: UIViewController {
     
     // MARK: - Class properties
     
-    private var enumIdInfo: idInformation?
+    private var enumIdInfo: IdInformation?
     
     // MARK: - Class methods
     
@@ -33,7 +32,7 @@ class BaseViewController: UIViewController {
     
     // MARK: - Public methods
     
-    func configureRightButtonNavigationBar(enumIdInformation: idInformation) {
+    func configureRightButtonNavigationBar(enumIdInformation: IdInformation) {
         let imageInfo = UIImage(systemName: "info.circle.fill")?.withRenderingMode(.alwaysTemplate)
         
         self.enumIdInfo = enumIdInformation
@@ -42,4 +41,3 @@ class BaseViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = infoButton
     }
 }
-

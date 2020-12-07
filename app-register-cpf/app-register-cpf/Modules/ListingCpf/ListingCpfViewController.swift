@@ -18,7 +18,7 @@ class ListingCpfViewController: BaseViewController {
     // MARK: - Class properties
     
     private let viewModel: ListingCpfViewModel
-    private let enumInformation: idInformation = .listingVC
+    private let enumInformation: IdInformation = .listingVC
     
     // MARK: - Init Cycle
     
@@ -78,7 +78,6 @@ extension ListingCpfViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             let index = indexPath.row
             let cpf = self.viewModel.Cpf[index]
-            
             
             self.viewModel.context.delete(cpf)
             self.viewModel.Cpf.remove(at: index)

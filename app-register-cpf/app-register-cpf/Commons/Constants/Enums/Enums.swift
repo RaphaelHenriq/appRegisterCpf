@@ -7,12 +7,12 @@
 
 import Foundation
 
-enum idInformation{
+enum IdInformation {
     case registerVC
     case listingVC
 }
 
-enum textFieldCpf{
+enum TextFieldCpf {
     case lessCharacters
     case onlyNumbers
     case saveCpf

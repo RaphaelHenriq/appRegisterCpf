@@ -39,8 +39,8 @@ extension UIViewController {
             handler?()
         })
         if buttonCancel {
-            let cancelAction = UIAlertAction(title: StringsAlerts.cancelRefresh, style: .default) {
-                (action: UIAlertAction!) -> Void in
+            let cancelAction = UIAlertAction(title: StringsAlerts.cancelRefresh, style: .default) { (_) in
+                self.navigationController?.popToRootViewController(animated: true)
             }
             alert.addAction(cancelAction)
         }
@@ -54,6 +54,16 @@ extension UIViewController {
         navigationController.modalTransitionStyle = .coverVertical
         present(navigationController, animated: true)
         navigationController.providesPresentationContextTransitionStyle = true
+    }
+    
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 

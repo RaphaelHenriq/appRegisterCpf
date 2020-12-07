@@ -18,7 +18,7 @@ class InformationViewController: UIViewController {
     
     // MARK: - Class properties
     
-    private var enumIdInfo: idInformation?
+    private var enumIdInfo: IdInformation?
     
     // MARK: - Init cycle
 
@@ -28,7 +28,7 @@ class InformationViewController: UIViewController {
         self.configureLabels()
     }
     
-    init(enumIdInfo: idInformation) {
+    init(enumIdInfo: IdInformation) {
         self.enumIdInfo = enumIdInfo
         super.init(nibName: nil, bundle: nil)
     }

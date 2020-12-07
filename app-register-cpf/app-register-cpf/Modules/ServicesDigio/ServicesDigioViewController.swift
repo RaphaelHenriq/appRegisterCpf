@@ -20,12 +20,10 @@ class ServicesDigioViewController: UIViewController {
     @IBOutlet weak var productsLabel: UILabel!
     @IBOutlet weak var productCollectionView: UICollectionView!
     @IBOutlet weak var loadingActivity: UIActivityIndicatorView!
-    
-    // MARK: - Class properties
 
-    // MARK: - Public properties
+    // MARK: - Class properties
     
-    let viewModel: ServicesDigioViewModel
+    private let viewModel: ServicesDigioViewModel
     
     // MARK: - Init methods
     
@@ -63,6 +61,7 @@ class ServicesDigioViewController: UIViewController {
     }
     
     private func configureContentServicesDigio() {
+        self.viewContent.isHidden = true
         self.view.backgroundColor = .systemGray5
         self.viewContent.backgroundColor = .clear
         self.imageViewDigioCash.allCorner(cornerRadius: 10)
@@ -76,20 +75,11 @@ class ServicesDigioViewController: UIViewController {
     }
     
     private func dataServicesDigio() {
-        self.formatTextLabelDigioCash()
+        self.labelDigioCash.text = self.viewModel.digioCash?.title
         self.imageViewDigioCash.cacheImageSDWebImage(from: self.viewModel.digioCash?.bannerURL, contentMode: .scaleAspectFill, completion: nil)
         self.productsLabel.text = StringsServicesDigioVC.labelProduct
         self.userImageView.image = UIImage(named: StringsServicesDigioVC.imageUser)
         self.userLabel.text = StringsServicesDigioVC.user
-    }
-    
-    private func formatTextLabelDigioCash() {
-        let textDigioCash = self.viewModel.digioCash?.title
-        let attributedString = NSMutableAttributedString(string: textDigioCash ?? "")
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 8), range: NSRange(location: 0, length: 2))
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 12), range: NSRange(location: 0, length: 4))
-        attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 16), range: NSRange(location: 0, length: 6))
-        self.labelDigioCash.attributedText = attributedString
     }
     
     private func showErrorScreen() {
@@ -128,13 +118,13 @@ extension ServicesDigioViewController: UICollectionViewDataSource, UICollectionV
             cellSpotlight.passData(self.viewModel.spotlight[indexPath.row])
             cellSpotlight.delegate = self
             return cellSpotlight
+            
         } else {
             let cellProducts = self.productCollectionView.dequeueReusableCell(ofType: ProductsCollectionViewCell.self, for: indexPath)
             
             cellProducts.passData(self.viewModel.product[indexPath.row])
             cellProducts.delegate = self
             return cellProducts
-            
         }
     }
     

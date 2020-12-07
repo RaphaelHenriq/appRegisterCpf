@@ -31,15 +31,15 @@ class RegisterCpfViewModel {
     }
     
     func coreData() {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         self.context = appDelegate.persistentContainer.viewContext
     }
     
-    func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: String) -> textFieldCpf {
+    func casesTextFieldCpf(limitAcceptedTextView: Bool, textField: String) -> TextFieldCpf {
         if (String(textField).isInt) {
             if limitAcceptedTextView {
                 return .saveCpf
-
+                
             } else {
                 return .lessCharacters
             }
