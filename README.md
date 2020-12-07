@@ -9,3 +9,8 @@ O RegisterCpf é um aplicativo de fins de aprendizado com foco em utilização d
 - Para navegação foi desenvolvida uma TabBarController e NavigationController, além também de uma BaseViewController geral para ser herdada pelas outras ViewControllers. Vale ressaltar a tela de Informação presente na Navigationcontroller, que gera informações pertinentes para a tela RegisterCpf e ListingCpf.
 - Todos os arquivos foram bem dividos para que tivesse um arquivo para Strings, para Extensions, para serviços de API e URLs.
 - Foi realizado testes unitários em funções de retorno da RegisterViewModel, onde ocorre a verificação do estado do campo que é preenchido o CPF. Também há uma classe de mock para esses testes, facilitando a utilização e organização do código.
+- Bibliotecas pods utilizadas:
+  - SwiftLint: Um sonar para fazer análise do código, dando alertas para possíveis problemas, como principalmente Force Cast.
+  - Alamofire: Biblioteca responsável por facilitar as requisição HTTP. 
+  - SDWebImage: Biblioteca para conversão de imagem.
+  - Quick/Nimble: Bibliotecas que facilitam a integração dos código unitários.
